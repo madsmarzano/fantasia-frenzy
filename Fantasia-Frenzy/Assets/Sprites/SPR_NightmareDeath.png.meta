@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cd6fe9408d912e545b6c0ef574c3459e
+guid: 30582497d1084e74eb4ee1c9e3180862
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,11 +101,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ammo Box (1)_0
+      name: SPR_NightmareDeath_01
       rect:
         serializedVersion: 2
         x: 0
@@ -113,20 +125,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 814e5e53a016b214aaced7aa9a126936
-      internalID: -144873719
+      spriteID: 135a1e86d3fe6fc4f958f3986cc618f6
+      internalID: 782190741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_1
+      name: SPR_NightmareDeath_02
       rect:
         serializedVersion: 2
         x: 100
@@ -134,20 +146,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d509c0ea58762d544918f66e61103e58
-      internalID: 764451118
+      spriteID: dcdc25c4f3c67fa4fa9216fa3c20ad7c
+      internalID: 1909293566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_2
+      name: SPR_NightmareDeath_03
       rect:
         serializedVersion: 2
         x: 200
@@ -155,20 +167,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70c00c98516b7c94980c488f57f2f11c
-      internalID: 1614455046
+      spriteID: f5c5d090791b34444b3e694ee81d5427
+      internalID: -1751654194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_3
+      name: SPR_NightmareDeath_04
       rect:
         serializedVersion: 2
         x: 300
@@ -176,41 +188,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad5e62b2bf61ea94d96fc358f5b57a48
-      internalID: 2118211959
+      spriteID: 4d5458db60af14b4389349e306062a3e
+      internalID: -2114954139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_4
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 400
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 273aa58384c3e2e4588635e1a31c9a72
-      internalID: -297590487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ammo Box (1)_5
+      name: SPR_NightmareDeath_05
       rect:
         serializedVersion: 2
         x: 0
@@ -218,20 +209,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5a9ee16c4347c740aadc609c039e08e
-      internalID: -286972874
+      spriteID: 11209c7ef2ed75148a7dc49023455a51
+      internalID: 358665416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_6
+      name: SPR_NightmareDeath_06
       rect:
         serializedVersion: 2
         x: 100
@@ -239,20 +230,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e025104ba2cc5f04ca627e1901a913ae
-      internalID: -1222122672
+      spriteID: d5ed17e0b42a14b4e82dcc3dc9c71153
+      internalID: 1367444456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_7
+      name: SPR_NightmareDeath_07
       rect:
         serializedVersion: 2
         x: 200
@@ -260,20 +251,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65c04a5a76d212342a96d07411f27603
-      internalID: 274367114
+      spriteID: 3518d6c50ee6c624991bcab87dced3ba
+      internalID: 2006143005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_8
+      name: SPR_NightmareDeath_08
       rect:
         serializedVersion: 2
         x: 300
@@ -281,41 +272,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25e90efe2531db448bc60baf8cc26f53
-      internalID: 1328066792
+      spriteID: b9960a17ccc7b5f4da9481865f805359
+      internalID: -1426157465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_9
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52ae7d78a143ff7498e1b140bada121b
-      internalID: 2122853141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ammo Box (1)_10
+      name: SPR_NightmareDeath_09
       rect:
         serializedVersion: 2
         x: 0
@@ -323,20 +293,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd215e8e0e65f28448f81d49a8a8365e
-      internalID: -630142585
+      spriteID: 590005db9d36c254ba166e29354d5880
+      internalID: 1561235060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_11
+      name: SPR_NightmareDeath_10
       rect:
         serializedVersion: 2
         x: 100
@@ -344,20 +314,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8592314744dd94142b1da5dde2429465
-      internalID: -944331128
+      spriteID: 8e250c0ea01699843b14aeb3f7a2d583
+      internalID: -794775126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_12
+      name: SPR_NightmareDeath_11
       rect:
         serializedVersion: 2
         x: 200
@@ -365,20 +335,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ac116bca8e91cf4bb9d50a272c5fb9a
-      internalID: 581137790
+      spriteID: 77da8947e51c3fd4993a9a1e6fde4fc6
+      internalID: -860641570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_13
+      name: SPR_NightmareDeath_12
       rect:
         serializedVersion: 2
         x: 300
@@ -386,41 +356,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d97f2da8bd9cf64581a5efe98edbd76
-      internalID: -1518125693
+      spriteID: b55bd952de2e4a84fb22b7a430b56d72
+      internalID: -952445966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_14
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 200
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 072484e9f658ae24e87992e30ab732ed
-      internalID: 1280761753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ammo Box (1)_15
+      name: SPR_NightmareDeath_13
       rect:
         serializedVersion: 2
         x: 0
@@ -428,20 +377,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ea370df8525cc54982bea42232b1861
-      internalID: 973314180
+      spriteID: c356fe0968920bc4b96a21b65dc28057
+      internalID: -838466416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_16
+      name: SPR_NightmareDeath_14
       rect:
         serializedVersion: 2
         x: 100
@@ -449,20 +398,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebffee45069319346948cbffe33cb338
-      internalID: 825333126
+      spriteID: 2578404e9f2c32541938674bef362e88
+      internalID: 1113829008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_17
+      name: SPR_NightmareDeath_15
       rect:
         serializedVersion: 2
         x: 200
@@ -470,20 +419,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ded2d8bc76c96d4f86755218a62f11c
-      internalID: 292769305
+      spriteID: 2b3036b80c94f2d4bb69bff959f81251
+      internalID: 624401584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_18
+      name: SPR_NightmareDeath_16
       rect:
         serializedVersion: 2
         x: 300
@@ -491,41 +440,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2be83ce8516b5944ace87f55945dfcb
-      internalID: 432632165
+      spriteID: 5a5417d46ac945742bf825495c3ba658
+      internalID: 1434117328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_19
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e3874572ad71e7419234b405d97d506
-      internalID: -1600859134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ammo Box (1)_20
+      name: SPR_NightmareDeath_17
       rect:
         serializedVersion: 2
         x: 0
@@ -533,20 +461,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13e5071728adc5b47a790d81b12eba30
-      internalID: 113792095
+      spriteID: 398a89dbc314d0147aa3cb8adc8f6d5f
+      internalID: 1342322565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_21
+      name: SPR_NightmareDeath_18
       rect:
         serializedVersion: 2
         x: 100
@@ -554,20 +482,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ecbd355b386bb45b6f477e30be1adc
-      internalID: -69603106
+      spriteID: 472317cfe67bc5f4d927cb02e9183e2a
+      internalID: -1853744883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Box (1)_22
+      name: SPR_NightmareDeath_19
       rect:
         serializedVersion: 2
         x: 200
@@ -575,35 +503,14 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19f043307761e2a4fac79c5de36bbd39
-      internalID: -1718206953
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ammo Box (1)_23
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 655abd02ec2820b4ca883e9334ac6a5a
-      internalID: 2079854479
+      spriteID: 1c620822990d89845a9d6111fb88feb4
+      internalID: -1822039342
       vertices: []
       indices: 
       edges: []
@@ -619,30 +526,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ammo Box (1)_7: 274367114
-      Ammo Box (1)_21: -69603106
-      Ammo Box (1)_19: -1600859134
-      Ammo Box (1)_11: -944331128
-      Ammo Box (1)_6: -1222122672
-      Ammo Box (1)_2: 1614455046
-      Ammo Box (1)_10: -630142585
-      Ammo Box (1)_5: -286972874
-      Ammo Box (1)_0: -144873719
-      Ammo Box (1)_8: 1328066792
-      Ammo Box (1)_13: -1518125693
-      Ammo Box (1)_20: 113792095
-      Ammo Box (1)_15: 973314180
-      Ammo Box (1)_4: -297590487
-      Ammo Box (1)_18: 432632165
-      Ammo Box (1)_14: 1280761753
-      Ammo Box (1)_23: 2079854479
-      Ammo Box (1)_3: 2118211959
-      Ammo Box (1)_22: -1718206953
-      Ammo Box (1)_9: 2122853141
-      Ammo Box (1)_17: 292769305
-      Ammo Box (1)_1: 764451118
-      Ammo Box (1)_16: 825333126
-      Ammo Box (1)_12: 581137790
+      SPR_NightmareDeath_12: -952445966
+      SPR_NightmareDeath_18: -1853744883
+      SPR_NightmareDeath_07: -1426157465
+      SPR_NightmareDeath_19: -1822039342
+      SPR_NightmareDeath_13: -838466416
+      SPR_NightmareDeath_01: 1909293566
+      SPR_NightmareDeath_08: 1561235060
+      SPR_NightmareDeath_15: 624401584
+      SPR_NightmareDeath_03: -2114954139
+      SPR_NightmareDeath_02: -1751654194
+      SPR_NightmareDeath_09: -794775126
+      SPR_NightmareDeath_14: 1113829008
+      SPR_NightmareDeath_17: 1342322565
+      SPR_NightmareDeath_05: 1367444456
+      SPR_NightmareDeath_16: 1434117328
+      SPR_NightmareDeath_04: 358665416
+      SPR_NightmareDeath_10: -860641570
+      SPR_NightmareDeath_06: 2006143005
+      SPR_NightmareDeath_11: -860641570
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 30582497d1084e74eb4ee1c9e3180862
+guid: cd6fe9408d912e545b6c0ef574c3459e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,23 +101,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nightmare_Death_0
+      name: SPR_WeaponBox_01
       rect:
         serializedVersion: 2
         x: 0
@@ -125,20 +113,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 135a1e86d3fe6fc4f958f3986cc618f6
-      internalID: 782190741
+      spriteID: 814e5e53a016b214aaced7aa9a126936
+      internalID: -144873719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_1
+      name: SPR_WeaponBox_02
       rect:
         serializedVersion: 2
         x: 100
@@ -146,20 +134,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcdc25c4f3c67fa4fa9216fa3c20ad7c
-      internalID: 1909293566
+      spriteID: d509c0ea58762d544918f66e61103e58
+      internalID: 764451118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_2
+      name: SPR_WeaponBox_03
       rect:
         serializedVersion: 2
         x: 200
@@ -167,20 +155,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5c5d090791b34444b3e694ee81d5427
-      internalID: -1751654194
+      spriteID: 70c00c98516b7c94980c488f57f2f11c
+      internalID: 1614455046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_3
+      name: SPR_WeaponBox_04
       rect:
         serializedVersion: 2
         x: 300
@@ -188,20 +176,41 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d5458db60af14b4389349e306062a3e
-      internalID: -2114954139
+      spriteID: ad5e62b2bf61ea94d96fc358f5b57a48
+      internalID: 2118211959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_4
+      name: SPR_WeaponBox_05
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273aa58384c3e2e4588635e1a31c9a72
+      internalID: -297590487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WeaponBox_06
       rect:
         serializedVersion: 2
         x: 0
@@ -209,20 +218,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11209c7ef2ed75148a7dc49023455a51
-      internalID: 358665416
+      spriteID: e5a9ee16c4347c740aadc609c039e08e
+      internalID: -286972874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_5
+      name: SPR_WeaponBox_07
       rect:
         serializedVersion: 2
         x: 100
@@ -230,20 +239,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5ed17e0b42a14b4e82dcc3dc9c71153
-      internalID: 1367444456
+      spriteID: e025104ba2cc5f04ca627e1901a913ae
+      internalID: -1222122672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_6
+      name: SPR_WeaponBox_08
       rect:
         serializedVersion: 2
         x: 200
@@ -251,20 +260,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3518d6c50ee6c624991bcab87dced3ba
-      internalID: 2006143005
+      spriteID: 65c04a5a76d212342a96d07411f27603
+      internalID: 274367114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_7
+      name: SPR_WeaponBox_09
       rect:
         serializedVersion: 2
         x: 300
@@ -272,20 +281,41 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9960a17ccc7b5f4da9481865f805359
-      internalID: -1426157465
+      spriteID: 25e90efe2531db448bc60baf8cc26f53
+      internalID: 1328066792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_8
+      name: SPR_WeaponBox_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ae7d78a143ff7498e1b140bada121b
+      internalID: 2122853141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WeaponBox_11
       rect:
         serializedVersion: 2
         x: 0
@@ -293,20 +323,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 590005db9d36c254ba166e29354d5880
-      internalID: 1561235060
+      spriteID: dd215e8e0e65f28448f81d49a8a8365e
+      internalID: -630142585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_9
+      name: SPR_WeaponBox_12
       rect:
         serializedVersion: 2
         x: 100
@@ -314,20 +344,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e250c0ea01699843b14aeb3f7a2d583
-      internalID: -794775126
+      spriteID: 8592314744dd94142b1da5dde2429465
+      internalID: -944331128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_10
+      name: SPR_WeaponBox_13
       rect:
         serializedVersion: 2
         x: 200
@@ -335,20 +365,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77da8947e51c3fd4993a9a1e6fde4fc6
-      internalID: -860641570
+      spriteID: 4ac116bca8e91cf4bb9d50a272c5fb9a
+      internalID: 581137790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_11
+      name: SPR_WeaponBox_14
       rect:
         serializedVersion: 2
         x: 300
@@ -356,20 +386,41 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b55bd952de2e4a84fb22b7a430b56d72
-      internalID: -952445966
+      spriteID: 7d97f2da8bd9cf64581a5efe98edbd76
+      internalID: -1518125693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_12
+      name: SPR_WeaponBox_15
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072484e9f658ae24e87992e30ab732ed
+      internalID: 1280761753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WeaponBox_16
       rect:
         serializedVersion: 2
         x: 0
@@ -377,20 +428,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c356fe0968920bc4b96a21b65dc28057
-      internalID: -838466416
+      spriteID: 7ea370df8525cc54982bea42232b1861
+      internalID: 973314180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_13
+      name: SPR_WeaponBox_17
       rect:
         serializedVersion: 2
         x: 100
@@ -398,20 +449,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2578404e9f2c32541938674bef362e88
-      internalID: 1113829008
+      spriteID: ebffee45069319346948cbffe33cb338
+      internalID: 825333126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_14
+      name: SPR_WeaponBox_18
       rect:
         serializedVersion: 2
         x: 200
@@ -419,20 +470,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b3036b80c94f2d4bb69bff959f81251
-      internalID: 624401584
+      spriteID: 6ded2d8bc76c96d4f86755218a62f11c
+      internalID: 292769305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_15
+      name: SPR_WeaponBox_19
       rect:
         serializedVersion: 2
         x: 300
@@ -440,20 +491,41 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a5417d46ac945742bf825495c3ba658
-      internalID: 1434117328
+      spriteID: c2be83ce8516b5944ace87f55945dfcb
+      internalID: 432632165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_16
+      name: SPR_WeaponBox_20
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3874572ad71e7419234b405d97d506
+      internalID: -1600859134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WeaponBox_21
       rect:
         serializedVersion: 2
         x: 0
@@ -461,20 +533,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 398a89dbc314d0147aa3cb8adc8f6d5f
-      internalID: 1342322565
+      spriteID: 13e5071728adc5b47a790d81b12eba30
+      internalID: 113792095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_17
+      name: SPR_WeaponBox_22
       rect:
         serializedVersion: 2
         x: 100
@@ -482,20 +554,20 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 472317cfe67bc5f4d927cb02e9183e2a
-      internalID: -1853744883
+      spriteID: 54ecbd355b386bb45b6f477e30be1adc
+      internalID: -69603106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Death_18
+      name: SPR_WeaponBox_23
       rect:
         serializedVersion: 2
         x: 200
@@ -503,14 +575,35 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c620822990d89845a9d6111fb88feb4
-      internalID: -1822039342
+      spriteID: 19f043307761e2a4fac79c5de36bbd39
+      internalID: -1718206953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_WeaponBox_24
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655abd02ec2820b4ca883e9334ac6a5a
+      internalID: 2079854479
       vertices: []
       indices: 
       edges: []
@@ -526,25 +619,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nightmare_Death_5: 1367444456
-      Nightmare_Death_9: -794775126
-      Nightmare_Death_3: -2114954139
-      Nightmare_Death_11: -952445966
-      Nightmare_Death_13: 1113829008
-      Nightmare_Death_12: -838466416
-      Nightmare_Death_14: 624401584
-      Nightmare_Death_8: 1561235060
-      Nightmare_Death_10: -860641570
-      Nightmare_Death_15: 1434117328
-      Nightmare_Death_7: -1426157465
-      Nightmare_Death_0: 782190741
-      Nightmare_Death_17: -1853744883
-      Nightmare_Death_16: 1342322565
-      Nightmare_Death_18: -1822039342
-      Nightmare_Death_2: -1751654194
-      Nightmare_Death_1: 1909293566
-      Nightmare_Death_6: 2006143005
-      Nightmare_Death_4: 358665416
+      SPR_WeaponBox_24: 2079854479
+      SPR_WeaponBox_17: 825333126
+      SPR_WeaponBox_23: -1718206953
+      SPR_WeaponBox_10: 2122853141
+      SPR_WeaponBox_05: -297590487
+      SPR_WeaponBox_18: 292769305
+      SPR_WeaponBox_04: 2118211959
+      SPR_WeaponBox_16: 973314180
+      SPR_WeaponBox_22: -69603106
+      SPR_WeaponBox_08: 274367114
+      SPR_WeaponBox_01: -144873719
+      SPR_WeaponBox_07: -1222122672
+      SPR_WeaponBox_11: -630142585
+      SPR_WeaponBox_02: 764451118
+      SPR_WeaponBox_12: -944331128
+      SPR_WeaponBox_14: -1518125693
+      SPR_WeaponBox_20: -1600859134
+      SPR_WeaponBox_06: -286972874
+      SPR_WeaponBox_13: 581137790
+      SPR_WeaponBox_15: 1280761753
+      SPR_WeaponBox_19: 432632165
+      SPR_WeaponBox_21: 113792095
+      SPR_WeaponBox_03: 1614455046
+      SPR_WeaponBox_09: 1328066792
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

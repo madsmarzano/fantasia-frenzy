@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nightmare_Idle_0
+      name: SPR_NightmareIdle_01
       rect:
         serializedVersion: 2
         x: 0
@@ -138,7 +138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Idle_1
+      name: SPR_NightmareIdle_02
       rect:
         serializedVersion: 2
         x: 100
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Idle_2
+      name: SPR_NightmareIdle_03
       rect:
         serializedVersion: 2
         x: 0
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Idle_3
+      name: SPR_NightmareIdle_04
       rect:
         serializedVersion: 2
         x: 100
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nightmare_Idle_4
+      name: SPR_NightmareIdle_05
       rect:
         serializedVersion: 2
         x: 0
@@ -232,11 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nightmare_Idle_1: -1607337559
-      Nightmare_Idle_2: 1575069665
-      Nightmare_Idle_0: 933370095
-      Nightmare_Idle_3: 147674521
-      Nightmare_Idle_4: -1020610224
+      SPR_NightmareIdle_03: 1575069665
+      SPR_NightmareIdle_02: -1607337559
+      SPR_NightmareIdle_04: 147674521
+      SPR_NightmareIdle_01: 933370095
+      SPR_NightmareIdle_05: -1020610224
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
