@@ -19,7 +19,7 @@ public class WeaponBoxAnimation : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerCollider.isTouchingBox)
+        if (Input.GetKeyDown(KeyCode.E) && playerCollider.isTouchingBox && !isOpen)
         {
             Open();
         }
@@ -30,14 +30,6 @@ public class WeaponBoxAnimation : MonoBehaviour
         if (other.CompareTag("Player") && !isOpen)
         {
             animator.Play("Blink");
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player") && !isOpen)
-        {
-            animator.Play("Idle");
         }
     }
 
