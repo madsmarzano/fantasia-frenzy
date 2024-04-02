@@ -73,9 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1580885585
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 818605038, guid: 7ffa32b2c3ecb6e4885fa6ada6b9e8bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4234088526508552361}
   bullet: {fileID: 2114752636909042973, guid: 542542ee40d40f14691edeafa271d74f, type: 3}
+  bolt: {fileID: 0}
   bulletSpawnPoint: {fileID: 0}
 --- !u!1 &7647459424489602369
 GameObject:

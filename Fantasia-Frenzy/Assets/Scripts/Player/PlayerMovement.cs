@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         body.velocity = new Vector2(body.velocity.x, height);
-        //grounded = false;
     }
 
 }

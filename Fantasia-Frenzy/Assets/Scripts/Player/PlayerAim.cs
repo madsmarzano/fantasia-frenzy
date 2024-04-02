@@ -6,10 +6,10 @@ using UnityEngine;
 public class PlayerAim : MonoBehaviour
 {
     [SerializeField] private GameObject gun;
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private Transform bulletSpawnPoint;
+    //[SerializeField] private GameObject bullet;
+    //[SerializeField] private Transform bulletSpawnPoint;
 
-    private GameObject bulletInst;
+    //private GameObject bulletInst;
 
     [SerializeField] Animator animator;
 
