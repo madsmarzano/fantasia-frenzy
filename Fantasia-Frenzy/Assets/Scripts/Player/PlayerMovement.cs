@@ -4,19 +4,36 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f; // Adjust the speed in the Unity Editor
+    [SerializeField] private float speed;
+    [SerializeField] private float height;
+    private Rigidbody2D body;
 
-    // Update is called once per frame
+    PlayerCollisionCheck playerCol;
+
+    //private bool grounded;
+
+    private void Awake()
+    {
+        body = GetComponent<Rigidbody2D>();
+        playerCol = GetComponent<PlayerCollisionCheck>();
+    }
+
     void Update()
     {
-        // Get input from the player
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
 
-        // Calculate the movement direction
-        Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0f);
+        body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y); //moves player left and right 
 
-        // Move the player
-        transform.Translate(movement * speed * Time.deltaTime);
+        //check for spacebar input (JUMP)
+        if (Input.GetKeyDown(KeyCode.Space) && playerCol.IsGrounded)
+        {
+            Jump();
+        }
     }
+
+    private void Jump()
+    {
+        body.velocity = new Vector2(body.velocity.x, height);
+        //grounded = false;
+    }
+
 }

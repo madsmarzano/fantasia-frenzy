@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6ee46f757279ce14ebeecf7dddeb7e47
+guid: 252e2769904d9c6419dd24e28cc36bef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,11 +101,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WP_basegun_0
+      name: SPR_NightmareIdle_01
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6b82b9f06193354b8ed733e38092840
-      internalID: -316279227
+      spriteID: eb1bf04a15bccee48aea49f7829c18c2
+      internalID: 933370095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WP_basegun_1
+      name: SPR_NightmareIdle_02
       rect:
         serializedVersion: 2
         x: 100
@@ -140,35 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48db0ca845349654d863767b63bf5aab
-      internalID: 1335105983
+      spriteID: 14bf17bc9bc7f87479becb1bef24da21
+      internalID: -1607337559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WP_basegun_2
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 200
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc6df4e0b72dff84ebb077f42cbf14fc
-      internalID: 67284803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WP_basegun_3
+      name: SPR_NightmareIdle_03
       rect:
         serializedVersion: 2
         x: 0
@@ -182,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 739de81e8e674dd4f816241901bab975
-      internalID: 742416312
+      spriteID: 4688f5e8f6db6d64d879227fb630d529
+      internalID: 1575069665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WP_basegun_4
+      name: SPR_NightmareIdle_04
       rect:
         serializedVersion: 2
         x: 100
@@ -203,35 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee4d6dfffaa007f41a689bf83e345edf
-      internalID: 1944786839
+      spriteID: 876c510a01d89ea4b9885a7be4ce1635
+      internalID: 147674521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WP_basegun_5
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d990fd9a82af86446bc6dc49a79a903f
-      internalID: 2075457749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WP_basegun_6
+      name: SPR_NightmareIdle_05
       rect:
         serializedVersion: 2
         x: 0
@@ -245,50 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83acd22ecd577cc40a01eeefbadd9641
-      internalID: -2079021777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WP_basegun_7
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3790f026e6dec064e96ea111d2aec951
-      internalID: 1750776594
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WP_basegun_8
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 040fe1b1b55c9bb4696de8077ed7dda8
-      internalID: -1457163310
+      spriteID: 56a6ad8a6b8920943856995985b554f2
+      internalID: -1020610224
       vertices: []
       indices: 
       edges: []
@@ -304,15 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WP_basegun_7: 1750776594
-      WP_basegun_3: 742416312
-      WP_basegun_4: 1944786839
-      WP_basegun_8: -1457163310
-      WP_basegun_1: 1335105983
-      WP_basegun_0: -316279227
-      WP_basegun_5: 2075457749
-      WP_basegun_2: 67284803
-      WP_basegun_6: -2079021777
+      SPR_NightmareIdle_03: 1575069665
+      SPR_NightmareIdle_02: -1607337559
+      SPR_NightmareIdle_04: 147674521
+      SPR_NightmareIdle_01: 933370095
+      SPR_NightmareIdle_05: -1020610224
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
