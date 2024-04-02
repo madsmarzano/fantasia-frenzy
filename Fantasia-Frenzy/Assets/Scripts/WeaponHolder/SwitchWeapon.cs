@@ -8,6 +8,7 @@ public class SwitchWeapon : MonoBehaviour
 
     public int selectedWeapon = 0;
     private int rand;
+    private bool boxOpen = false;
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class SwitchWeapon : MonoBehaviour
         }
 
         // INTERACTING WITH WEAPON BOX
-        if (Input.GetKeyUp(KeyCode.E) && playerCollider.isTouchingBox) //checks if 'E' key is pressed and player is touching weapon box
+        if (Input.GetKeyUp(KeyCode.E) && playerCollider.isTouchingBox && !boxOpen) //checks if 'E' key is pressed and player is touching weapon box
         {
             GenerateWeapon();
         }
@@ -53,6 +54,7 @@ public class SwitchWeapon : MonoBehaviour
             rand = Random.Range(1, transform.childCount);
         }
         selectedWeapon = rand;
+        boxOpen = true;
         SelectWeapon();
     }
 
