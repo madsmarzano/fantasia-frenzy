@@ -151,8 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  height: 0
-  _isFacingRight: 1
+  height: 8
 --- !u!70 &4936232629496790665
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -189,7 +188,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6700997741811486709
 MonoBehaviour:
   m_ObjectHideFlags: 0
