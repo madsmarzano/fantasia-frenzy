@@ -42,11 +42,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6700997741811486707}
   - component: {fileID: 6700997741811486706}
+  - component: {fileID: 5383963734172917102}
   - component: {fileID: 6700997741811486704}
   - component: {fileID: 4936232629496790665}
   - component: {fileID: 6700997741811486711}
-  - component: {fileID: 6700997741811486708}
-  - component: {fileID: 6700997741811486698}
   - component: {fileID: 6700997741811486709}
   m_Layer: 0
   m_Name: Player
@@ -123,6 +122,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5383963734172917102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6700997741811486717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a79277f64458c47b0b98938c5b032b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 6700997741787527164}
+  bullet: {fileID: 0}
+  bulletSpawnPoint: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &6700997741811486704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   height: 0
+  _isFacingRight: 1
 --- !u!70 &4936232629496790665
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -174,35 +190,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6700997741811486708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6700997741811486717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604eb5fa39235274aa094cb6faea12df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 0}
---- !u!114 &6700997741811486698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6700997741811486717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64a79277f64458c47b0b98938c5b032b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gun: {fileID: 6700997741787527164}
-  bullet: {fileID: 0}
-  bulletSpawnPoint: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!114 &6700997741811486709
 MonoBehaviour:
   m_ObjectHideFlags: 0

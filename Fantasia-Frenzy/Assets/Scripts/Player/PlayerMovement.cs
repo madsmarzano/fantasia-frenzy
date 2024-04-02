@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
 
     PlayerCollisionCheck playerCol;
+
     //private bool grounded;
 
     private void Awake()
