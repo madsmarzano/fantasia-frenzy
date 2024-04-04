@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    public float enemyHealth = 10f;
+    public float health = 10f;
 
     private Animator animator;
 
@@ -15,7 +15,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (enemyHealth == 0f)
+        if (health == 0f)
         {
             EnemyDeath();
         }
