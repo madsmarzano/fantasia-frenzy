@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6939770477350593488}
   - component: {fileID: 2715350800529133171}
   - component: {fileID: 2220738218235117763}
-  - component: {fileID: 6939770477350593485}
+  - component: {fileID: 3951373632119340827}
   - component: {fileID: 368948303064137616}
   m_Layer: 9
   m_Name: Nightmare
@@ -146,7 +146,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6939770477350593485
+--- !u!114 &3951373632119340827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c914f53f9ec54aa4e9ab6b02d9d5b0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 10
+  health: 5
 --- !u!114 &368948303064137616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8472a2c37225fc94ea8818ac57ef4d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatSpeed: 3

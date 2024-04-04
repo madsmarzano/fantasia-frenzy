@@ -37,7 +37,7 @@ public class BulletBehavior : MonoBehaviour
             if (collision.CompareTag("Enemy"))
             {
                 enemy = collision.GetComponent<EnemyBehavior>();
-                enemy.enemyHealth = enemy.enemyHealth - damage;
+                enemy.health = enemy.health - damage;
             }
 
             //destroy bullet
