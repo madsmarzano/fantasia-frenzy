@@ -1090,6 +1090,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WeaponBox
       objectReference: {fileID: 0}
+    - target: {fileID: 7347534826092679574, guid: 2c72cc6f2a6c590429f1a8ebedf4fd79, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7347534826092679574, guid: 2c72cc6f2a6c590429f1a8ebedf4fd79, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1348159267
+      objectReference: {fileID: 0}
     - target: {fileID: 7347534826092679575, guid: 2c72cc6f2a6c590429f1a8ebedf4fd79, type: 3}
       propertyPath: m_RootOrder
       value: 6
