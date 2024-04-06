@@ -72,6 +72,8 @@ public class PlayerCollisionCheck : MonoBehaviour
         IsOnCeiling = touchingCol.Cast(Vector2.up, castFilter, ceilingHits, ceilingDistance) > 0;
     }
 
+    //FUNCTIONS THAT CHECK FOR COLLISION WITH WEAPON BOX
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("WeaponBox"))
