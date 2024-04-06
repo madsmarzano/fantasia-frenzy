@@ -1,3 +1,4 @@
+using System.CodeDom.Compiler;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
@@ -8,20 +9,33 @@ public class WeaponBoxAnimation : MonoBehaviour
 
     private PlayerCollisionCheck playerCollider;
     private Animator animator;
+    private SwitchWeapon weapon;
+    private GameObject _WeaponHolder;
 
-    private bool isOpen = false;
+    public bool isOpen = false;
+    public bool boxActive = false;
+
+    private int rand;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollisionCheck>();
+        weapon = GameObject.FindGameObjectWithTag("WeaponHolder").GetComponent<SwitchWeapon>();
+        _WeaponHolder = GameObject.FindGameObjectWithTag("WeaponHolder");
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerCollider.isTouchingBox && !isOpen)
+        if (Input.GetKeyDown(KeyCode.E) && boxActive && !isOpen)
         {
             Open();
+            GenerateWeapon();
+        }
+
+        if (isOpen)
+        {
+            //DisableBox();
         }
     }
 
@@ -30,6 +44,7 @@ public class WeaponBoxAnimation : MonoBehaviour
         if (other.CompareTag("Player") && !isOpen)
         {
             animator.Play("Blink");
+            boxActive = true;
         }
     }
 
@@ -38,6 +53,7 @@ public class WeaponBoxAnimation : MonoBehaviour
         if (other.CompareTag("Player") && !isOpen)
         {
             animator.Play("Idle");
+            boxActive = false;
         }
     }
 
@@ -47,6 +63,20 @@ public class WeaponBoxAnimation : MonoBehaviour
         {
             animator.Play("Open");
             isOpen = true;
+            //GetComponent<Collider2D>().enabled = false;
         }
+    }
+
+    private void GenerateWeapon()
+    {
+        Debug.Log("Generating Weapon");
+        rand = Random.Range(1, transform.childCount);
+        while (rand == weapon.selectedWeapon)
+        {
+            rand = Random.Range(1, _WeaponHolder.transform.childCount);
+        }
+        weapon.selectedWeapon = rand;
+        //boxOpen = true;
+        //SelectWeapon();
     }
 }
