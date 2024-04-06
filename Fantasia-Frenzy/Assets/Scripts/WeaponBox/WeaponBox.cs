@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
-public class WeaponBoxAnimation : MonoBehaviour
+public class WeaponBox : MonoBehaviour
 {
 
     private PlayerCollisionCheck playerCollider;
@@ -70,7 +70,7 @@ public class WeaponBoxAnimation : MonoBehaviour
     private void GenerateWeapon()
     {
         Debug.Log("Generating Weapon");
-        rand = Random.Range(1, transform.childCount);
+        rand = Random.Range(1, _WeaponHolder.transform.childCount);
         while (rand == weapon.selectedWeapon)
         {
             rand = Random.Range(1, _WeaponHolder.transform.childCount);

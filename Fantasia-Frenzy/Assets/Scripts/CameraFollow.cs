@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    private Vector3 offset = new Vector3 (0f, 0f, -30f);
+    [SerializeField] private Vector3 offset = new Vector3 (0f, 3f, -30f);
     private float smoothTime = 0.20f;
     private Vector3 velocity = Vector3.zero;
 
