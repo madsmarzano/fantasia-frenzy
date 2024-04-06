@@ -5,10 +5,12 @@ using UnityEngine;
 public class SwitchWeapon : MonoBehaviour
 {
     private PlayerCollisionCheck playerCollider;
+    //private WeaponBoxAnimation wb;
 
     public int selectedWeapon = 0;
+    public int currentWeapon = 0;
     private int rand;
-    private bool boxOpen = false;
+    //private bool boxOpen = false;
 
     private void Start()
     {
@@ -25,14 +27,19 @@ public class SwitchWeapon : MonoBehaviour
             RejectWeapon();
         }
 
-        // INTERACTING WITH WEAPON BOX
-        if (Input.GetKeyUp(KeyCode.E) && playerCollider.isTouchingBox && !boxOpen) //checks if 'E' key is pressed and player is touching weapon box
+        if (currentWeapon != selectedWeapon)
         {
-            GenerateWeapon();
+            SelectWeapon();
         }
+
+        // INTERACTING WITH WEAPON BOX
+        //if (Input.GetKeyDown(KeyCode.E) && playerCollider.isTouchingBox) //checks if 'E' key is pressed and player is touching weapon box
+        //{
+        //    GenerateWeapon();
+        //}
     }
 
-    void SelectWeapon()
+    public void SelectWeapon()
     {
         int i = 0;
         foreach (Transform weapon in transform)
@@ -43,24 +50,27 @@ public class SwitchWeapon : MonoBehaviour
                 weapon.gameObject.SetActive(false);
             i++;
         }
+        currentWeapon = selectedWeapon;
     }
 
     //random weapon generator - called when interracting with Weapon Box
-    private void GenerateWeapon()
-    {
-        rand = Random.Range(1, transform.childCount);
-        while (rand == selectedWeapon)
-        {
-            rand = Random.Range(1, transform.childCount);
-        }
-        selectedWeapon = rand;
-        boxOpen = true;
-        SelectWeapon();
-    }
+    //private void GenerateWeapon()
+    //{
+    //    Debug.Log("Generating Weapon");
+    //    rand = Random.Range(1, transform.childCount);
+    //    while (rand == selectedWeapon)
+    //    {
+    //        rand = Random.Range(1, transform.childCount);
+    //    }
+    //    selectedWeapon = rand;
+    //    //boxOpen = true;
+    //    SelectWeapon();
+    //}
 
     void RejectWeapon()
     {
         selectedWeapon = 0;
         SelectWeapon();
     }
+
 }
