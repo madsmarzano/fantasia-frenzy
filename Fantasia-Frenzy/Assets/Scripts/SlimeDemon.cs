@@ -13,10 +13,14 @@ public class SlimeDemon : MonoBehaviour
     private bool isWaiting = false;
 
     private Animator animator;
+    private new CapsuleCollider2D collider;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        collider = GetComponent<CapsuleCollider2D>();
+
+        collider.enabled = false;
     }
 
     private void Update()
@@ -39,6 +43,7 @@ public class SlimeDemon : MonoBehaviour
     private void PopUp()
     {
         animator.Play("Popup");
+        collider.enabled = true;
         isUp = true;
     }
 

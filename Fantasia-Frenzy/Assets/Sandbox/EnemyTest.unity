@@ -631,6 +631,8 @@ GameObject:
   - component: {fileID: 1280795142}
   - component: {fileID: 1280795141}
   - component: {fileID: 1280795144}
+  - component: {fileID: 1280795146}
+  - component: {fileID: 1280795145}
   m_Layer: 7
   m_Name: SlimeDemon
   m_TagString: Enemy
@@ -742,6 +744,36 @@ MonoBehaviour:
   attackRange: 5
   projectileSpawnPoint: {fileID: 755371406}
   projectile: {fileID: 5705007798780964841, guid: 2f0825e338ba2244d8984df71dc6e4b9, type: 3}
+--- !u!70 &1280795145
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280795140}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.004183471, y: -0.30121183}
+  m_Size: {x: 1.4599682, y: 2.5225763}
+  m_Direction: 0
+--- !u!114 &1280795146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280795140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c914f53f9ec54aa4e9ab6b02d9d5b0a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  damage: 1
 --- !u!1 &1346286496
 GameObject:
   m_ObjectHideFlags: 0
