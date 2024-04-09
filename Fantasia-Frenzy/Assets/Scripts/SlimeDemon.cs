@@ -6,8 +6,11 @@ public class SlimeDemon : MonoBehaviour
 {
     public Transform target;
     public float attackRange;
+    [SerializeField] GameObject projectileSpawnPoint;
+    [SerializeField] GameObject projectile;
 
     private bool isUp = false;
+    private bool isWaiting = false;
 
     private Animator animator;
 
@@ -26,6 +29,11 @@ public class SlimeDemon : MonoBehaviour
         {
             Retract();
         }
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Mouth Open") && !isWaiting)
+        {
+            Attack();
+        }
     }
 
     private void PopUp()
@@ -38,5 +46,11 @@ public class SlimeDemon : MonoBehaviour
     {
         animator.Play("Retract");
         isUp = false;
+    }
+
+    private void Attack()
+    {
+        GameObject slimeProjectile = Instantiate(projectile, projectileSpawnPoint.transform.position, Quaternion.identity);
+        isWaiting = true;
     }
 }

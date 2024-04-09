@@ -12,7 +12,7 @@ public class SlimeAttack : MonoBehaviour
     private Rigidbody2D rb;
     public Transform target;
 
-    private Vector2 shootDirection => target.transform.localScale.x > gameObject.transform.localScale.x ? Vector2.right : Vector2.left; //checks if player is to right or left of slime
+    private Vector2 shootDirection => target.transform.localScale.x < gameObject.transform.localScale.x ? Vector2.right : Vector2.left; //checks if player is to right or left of slime
 
     private void Start()
     {
