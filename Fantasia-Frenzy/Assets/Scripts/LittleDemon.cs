@@ -10,27 +10,34 @@ public class LittleDemon : MonoBehaviour
     public Transform target;
     public float attackDistance;
 
-    private bool isHolding = false;
+    private bool isAttacking = false;
 
     private Vector2 newPos;
+    private Vector3 targetPos;
 
-    private Rigidbody2D rb;
-
-    private void Awake()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        GetDirection();
+        targetPos = new Vector3(transform.position.x * runDistance, transform.position.y, transform.position.z);
     }
 
     private void Update()
     {
         GetDirection();
 
-        Vector2 targetPos = new Vector2 (target.position.x * runDistance, transform.position.y);
+        //Vector2 targetPos = new Vector2 (transform.position.x * runDistance, transform.position.y);
         if (Vector2.Distance(transform.position, target.position) < attackDistance)
         {
             //Charge();
-
-            transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+            isAttacking = true;
+            while (isAttacking)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+                if (transform.position == targetPos)
+                {
+                    isAttacking = false; break;
+                }
+            }
             //isHolding = true;
         }
     }
@@ -40,7 +47,7 @@ public class LittleDemon : MonoBehaviour
         if (target.position.x < transform.position.x)
         {
             //enemy moves left
-            runDistance = -2f;
+            runDistance = 2f;
         }
         else if (target.position.x > transform.position.x)
         {
