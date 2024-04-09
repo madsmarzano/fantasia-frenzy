@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBehavior : MonoBehaviour
 {
     public float health = 10f;
+    public float damage = 1f;
 
     private Animator animator;
 
@@ -23,6 +24,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void EnemyDeath()
     {
-        animator.Play("Death");
+        gameObject.SetActive(false);
+        //animator.Play("Death");
     }
 }
