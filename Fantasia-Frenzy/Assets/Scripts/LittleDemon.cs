@@ -6,39 +6,32 @@ using UnityEngine;
 public class LittleDemon : MonoBehaviour
 {
     public float speed;
-    public float runDistance;
     public Transform target;
     public float attackDistance;
 
-    private bool isAttacking = false;
+    private bool isFinished = false;
 
     private Vector2 newPos;
-    private Vector3 targetPos;
+    private Vector2 targetPos;
+    private Vector2 direction;
+    private Rigidbody2D rb;
 
     private void Start()
     {
         GetDirection();
-        targetPos = new Vector3(transform.position.x * runDistance, transform.position.y, transform.position.z);
+        //targetPos = new Vector2(transform.position.x * runDistance, transform.position.y);
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        GetDirection();
+        //GetDirection();
 
         //Vector2 targetPos = new Vector2 (transform.position.x * runDistance, transform.position.y);
-        if (Vector2.Distance(transform.position, target.position) < attackDistance)
+        if (Vector2.Distance(transform.position, target.position) < attackDistance && !isFinished)
         {
-            //Charge();
-            isAttacking = true;
-            while (isAttacking)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-                if (transform.position == targetPos)
-                {
-                    isAttacking = false; break;
-                }
-            }
-            //isHolding = true;
+            GetDirection();
+            Attack();
         }
     }
 
@@ -47,30 +40,20 @@ public class LittleDemon : MonoBehaviour
         if (target.position.x < transform.position.x)
         {
             //enemy moves left
-            runDistance = 2f;
+            direction = Vector2.left;
         }
         else if (target.position.x > transform.position.x)
         {
             //enemy moves right
-            runDistance = 2f;
+            direction = Vector2.right;
         }
     }
 
-    private void Charge()
+    private void Attack()
     {
-        //transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-        //transform.position = new Vector2(target.position.x * overshoot, transform.position.y);
-        if (target.position.x < transform.position.x)
+        while (Vector2.Distance(transform.position, target.position) < attackDistance)
         {
-            //enemy moves left
-            newPos = new Vector2(-runDistance, transform.position.y);
-            transform.position = Vector2.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
-        }
-        else if (target.position.x > transform.position.x)
-        {
-            //enemy moves right
-            newPos = new Vector2(runDistance, transform.position.y);
-            transform.position = Vector2.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
+            rb.velocity = direction * speed;
         }
     }
 }
