@@ -6,13 +6,13 @@ public class Nightmare : MonoBehaviour
 {
     public float floatSpeed = 3f;
     public bool isDead = false;
-    private EnemyBehavior eb;
+    private EnemyHealth enemyHealth;
 
     Rigidbody2D rb;
 
     private void Start()
     {
-        eb = GetComponent<EnemyBehavior>();
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     private void Awake()
@@ -22,7 +22,7 @@ public class Nightmare : MonoBehaviour
     
     private void Update()
     {
-        if (eb.health == 0)
+        if (enemyHealth.health == 0)
         {
             isDead = true;
             rb.velocity = new Vector2(rb.velocity.x, floatSpeed * Vector2.down.x);
