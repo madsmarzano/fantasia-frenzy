@@ -6,54 +6,62 @@ using UnityEngine;
 public class LittleDemon : MonoBehaviour
 {
     public float speed;
-    public Transform target;
     public float attackDistance;
 
-    private bool isFinished = false;
+    public bool inRange = false;
+    private bool isAttacking = false;
 
-    private Vector2 newPos;
-    private Vector2 targetPos;
     private Vector2 direction;
     private Rigidbody2D rb;
+    private Transform enemy;
+    private Transform target;
 
     private void Start()
     {
-        GetDirection();
-        //targetPos = new Vector2(transform.position.x * runDistance, transform.position.y);
         rb = GetComponent<Rigidbody2D>();
+        enemy = GetComponent<Transform>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        GetDirection();
     }
 
     private void Update()
     {
-        //GetDirection();
 
-        //Vector2 targetPos = new Vector2 (transform.position.x * runDistance, transform.position.y);
-        if (Vector2.Distance(transform.position, target.position) < attackDistance && !isFinished)
+        if (Vector2.Distance(enemy.position, target.position) < attackDistance)
         {
-            GetDirection();
-            Attack();
+            inRange = true;
+        }
+        else
+        {
+            inRange = false;
+        }
+
+        if (inRange && !isAttacking)
+        {
+            StartCoroutine(Attack());
         }
     }
 
     private void GetDirection()
     {
-        if (target.position.x < transform.position.x)
+        if (target.position.x < enemy.position.x)
         {
             //enemy moves left
             direction = Vector2.left;
         }
-        else if (target.position.x > transform.position.x)
+        else if (target.position.x > enemy.position.x)
         {
             //enemy moves right
             direction = Vector2.right;
         }
     }
 
-    private void Attack()
+    IEnumerator Attack()
     {
-        while (Vector2.Distance(transform.position, target.position) < attackDistance)
-        {
-            rb.velocity = direction * speed;
-        }
+        isAttacking = true;
+        rb.velocity = direction * speed;
+        yield return new WaitForSecondsRealtime(3);
+        GetDirection();
+        isAttacking = false;
     }
 }
