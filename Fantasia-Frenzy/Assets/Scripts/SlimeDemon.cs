@@ -35,6 +35,7 @@ public class SlimeDemon : MonoBehaviour
             Retract();
         }
 
+        //If animation of mouth opening has finished player, start Attack
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Mouth Open") && !isWaiting)
         {
             Attack();
@@ -56,7 +57,7 @@ public class SlimeDemon : MonoBehaviour
 
     private void Attack()
     {
-        GameObject slimeProjectile = Instantiate(projectile, projectileSpawnPoint.transform.position, Quaternion.identity);
+        GameObject slimeProjectile = Instantiate(projectile, projectileSpawnPoint.transform.position, Quaternion.identity); //spawns the projectile
         isWaiting = true;
     }
 }

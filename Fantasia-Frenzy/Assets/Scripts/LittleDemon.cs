@@ -7,6 +7,7 @@ public class LittleDemon : MonoBehaviour
 {
     public float speed;
     public float attackDistance;
+    public int damage = 10;
 
     public bool inRange = false;
     private bool isAttacking = false;
@@ -79,7 +80,7 @@ public class LittleDemon : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            player.health -= 10;
+            player.health -= damage;
         }
     }
 }
