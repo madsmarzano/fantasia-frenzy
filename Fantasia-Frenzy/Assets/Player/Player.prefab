@@ -42,7 +42,7 @@ SortingGroup:
   m_GameObject: {fileID: 6700997741787527164}
   m_Enabled: 1
   m_SortingLayerID: -1580885585
-  m_SortingLayer: 7
+  m_SortingLayer: 10
   m_SortingOrder: 2
 --- !u!1 &6700997741811486717
 GameObject:
@@ -55,10 +55,11 @@ GameObject:
   - component: {fileID: 6700997741811486707}
   - component: {fileID: 6700997741811486706}
   - component: {fileID: 5383963734172917102}
+  - component: {fileID: 6700997741811486709}
+  - component: {fileID: 6034048559072835723}
   - component: {fileID: 6700997741811486704}
   - component: {fileID: 4936232629496790665}
   - component: {fileID: 6700997741811486711}
-  - component: {fileID: 6700997741811486709}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -121,7 +122,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1580885585
-  m_SortingLayer: 7
+  m_SortingLayer: 10
   m_SortingOrder: 1
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.2783019, g: 0.6270337, b: 1, a: 1}
@@ -148,6 +149,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gun: {fileID: 6700997741787527164}
   animator: {fileID: 0}
+--- !u!114 &6700997741811486709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6700997741811486717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef282ba2fa828b42ab55edeecc76436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  groundDistance: 0.05
+  wallDistance: 0.2
+  ceilingDistance: 0.05
+  isTouchingBox: 0
+  _isGrounded: 0
+  _isOnWall: 0
+  _isOnCeiling: 0
+--- !u!114 &6034048559072835723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6700997741811486717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128eba7c96644cb42be04ddb917023a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
 --- !u!114 &6700997741811486704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,39 +247,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6700997741811486709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6700997741811486717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aef282ba2fa828b42ab55edeecc76436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  castFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  groundDistance: 0.05
-  wallDistance: 0.2
-  ceilingDistance: 0.05
-  isTouchingBox: 0
-  _isGrounded: 0
-  _isOnWall: 0
-  _isOnCeiling: 0
 --- !u!1 &6700997741991120440
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +314,7 @@ SortingGroup:
   m_GameObject: {fileID: 6700997741991120440}
   m_Enabled: 1
   m_SortingLayerID: -1580885585
-  m_SortingLayer: 7
+  m_SortingLayer: 10
   m_SortingOrder: 3
 --- !u!1001 &2505067111072057640
 PrefabInstance:

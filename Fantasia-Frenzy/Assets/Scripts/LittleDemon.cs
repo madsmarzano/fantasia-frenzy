@@ -16,11 +16,14 @@ public class LittleDemon : MonoBehaviour
     private Transform enemy;
     private Transform target;
 
+    private PlayerHealth player;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         enemy = GetComponent<Transform>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
         GetDirection();
     }
@@ -70,5 +73,13 @@ public class LittleDemon : MonoBehaviour
         yield return new WaitForSecondsRealtime(3); //waits 3 seconds before attacking again if Player is still in range
         GetDirection(); //checks for new player direction
         isAttacking = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            player.health -= 10;
+        }
     }
 }

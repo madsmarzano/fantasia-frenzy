@@ -6,7 +6,7 @@ public class SlimeDemon : MonoBehaviour
 {
     private Transform target;
     public float attackRange;
-    [SerializeField] GameObject projectileSpawnPoint;
+    [SerializeField] GameObject projectileSpawnPoint; //child object of SlimeDemon
     [SerializeField] GameObject projectile;
 
     private bool isUp = false;
