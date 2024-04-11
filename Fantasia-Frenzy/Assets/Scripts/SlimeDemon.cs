@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SlimeDemon : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
     public float attackRange;
     [SerializeField] GameObject projectileSpawnPoint;
     [SerializeField] GameObject projectile;
@@ -19,6 +19,7 @@ public class SlimeDemon : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         collider = GetComponent<CapsuleCollider2D>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
         collider.enabled = false;
     }

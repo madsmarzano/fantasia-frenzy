@@ -10,7 +10,7 @@ public class BulletBehavior : MonoBehaviour
 
     public float damage = 1f;
 
-    private EnemyBehavior enemy;
+    private EnemyHealth enemy;
 
     private Rigidbody2D rb;
 
@@ -36,7 +36,7 @@ public class BulletBehavior : MonoBehaviour
             //damage enemy
             if (collision.CompareTag("Enemy"))
             {
-                enemy = collision.GetComponent<EnemyBehavior>();
+                enemy = collision.GetComponent<EnemyHealth>();
                 enemy.health = enemy.health - damage;
             }
 

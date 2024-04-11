@@ -21,6 +21,7 @@ public class LittleDemon : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         enemy = GetComponent<Transform>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
         GetDirection();
     }
 
@@ -44,14 +45,20 @@ public class LittleDemon : MonoBehaviour
 
     private void GetDirection()
     {
+        Vector3 localScale = Vector3.one;
+
         if (target.position.x < enemy.position.x)
         {
             //enemy moves left
+            localScale.x = 1;
+            transform.localScale = localScale;
             direction = Vector2.left;
         }
         else if (target.position.x > enemy.position.x)
         {
             //enemy moves right
+            localScale.x = -1;
+            transform.localScale = localScale;
             direction = Vector2.right;
         }
     }
@@ -59,9 +66,9 @@ public class LittleDemon : MonoBehaviour
     IEnumerator Attack()
     {
         isAttacking = true;
-        rb.velocity = direction * speed;
-        yield return new WaitForSecondsRealtime(3);
-        GetDirection();
+        rb.velocity = direction * speed; //moves enemy in direction of the player
+        yield return new WaitForSecondsRealtime(3); //waits 3 seconds before attacking again if Player is still in range
+        GetDirection(); //checks for new player direction
         isAttacking = false;
     }
 }
