@@ -10,12 +10,10 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private Material flashMaterial;
     [SerializeField] private Material originalMaterial;
 
-    private Animator animator;
     private Coroutine _damageEffect;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         originalMaterial = _spriteRenderer.material;
     }
@@ -51,6 +49,5 @@ public class EnemyHealth : MonoBehaviour
     private void EnemyDeath()
     {
         gameObject.SetActive(false);
-        //animator.Play("Death");
     }
 }
