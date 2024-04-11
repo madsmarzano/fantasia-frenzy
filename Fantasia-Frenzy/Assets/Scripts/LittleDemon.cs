@@ -45,14 +45,20 @@ public class LittleDemon : MonoBehaviour
 
     private void GetDirection()
     {
+        Vector3 localScale = Vector3.one;
+
         if (target.position.x < enemy.position.x)
         {
             //enemy moves left
+            localScale.x = 1;
+            transform.localScale = localScale;
             direction = Vector2.left;
         }
         else if (target.position.x > enemy.position.x)
         {
             //enemy moves right
+            localScale.x = -1;
+            transform.localScale = localScale;
             direction = Vector2.right;
         }
     }
