@@ -7,13 +7,17 @@ public class EnemyHealth : MonoBehaviour
     public float health = 10f;
 
     private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Material flashMaterial;
+    [SerializeField] private Material originalMaterial;
 
     private Animator animator;
+    private Coroutine _damageEffect;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        originalMaterial = _spriteRenderer.material;
     }
 
     private void Update()
@@ -24,19 +28,24 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Bullet"))
+        if (other.CompareTag("Bullet"))
         {
-            StartCoroutine(DamageEffect());
+            if (_damageEffect != null)
+            {
+                StopCoroutine(_damageEffect);
+            }
+            _damageEffect = StartCoroutine(DamageEffect());
         }
     }
 
     IEnumerator DamageEffect()
     {
-        _spriteRenderer.color = Color.red;
+        _spriteRenderer.material = flashMaterial;
         yield return new WaitForSeconds(0.15f);
-        yield return null;
+        _spriteRenderer.material = originalMaterial;
+        _damageEffect = null;
     }
 
     private void EnemyDeath()
