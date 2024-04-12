@@ -3028,6 +3028,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6034048559072835723, guid: 16b78430edd8061439ff4df3e6bfe73a, type: 3}
+      propertyPath: flashMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: c8500af2e3e1a394c907e8cb6cfbb3c2, type: 2}
     - target: {fileID: 6700997741811486704, guid: 16b78430edd8061439ff4df3e6bfe73a, type: 3}
       propertyPath: speed
       value: 8

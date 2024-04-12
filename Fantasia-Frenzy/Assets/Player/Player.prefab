@@ -197,6 +197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
+  flashMaterial: {fileID: 2100000, guid: c8500af2e3e1a394c907e8cb6cfbb3c2, type: 2}
+  originalMaterial: {fileID: 0}
 --- !u!114 &6700997741811486704
 MonoBehaviour:
   m_ObjectHideFlags: 0
