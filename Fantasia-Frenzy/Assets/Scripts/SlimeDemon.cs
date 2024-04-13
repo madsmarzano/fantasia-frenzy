@@ -10,10 +10,13 @@ public class SlimeDemon : MonoBehaviour
     [SerializeField] GameObject projectile;
 
     private bool isUp = false;
-    private bool isWaiting = false;
+    private bool isAttacking = false;
 
     private Animator animator;
     private new CapsuleCollider2D collider;
+
+    private PlayerHealth player;
+    [SerializeField] private int damage;
 
     private void Start()
     {
@@ -26,6 +29,7 @@ public class SlimeDemon : MonoBehaviour
 
     private void Update()
     {
+
         if (Vector2.Distance(transform.position, target.position) < attackRange && !isUp)
         {
             PopUp();
@@ -35,8 +39,8 @@ public class SlimeDemon : MonoBehaviour
             Retract();
         }
 
-        //If animation of mouth opening has finished player, start Attack
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Mouth Open") && !isWaiting)
+        //If animation of mouth opening has finished playing, start Attack
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Mouth Open") && !isAttacking)
         {
             Attack();
         }
@@ -52,12 +56,28 @@ public class SlimeDemon : MonoBehaviour
     private void Retract()
     {
         animator.Play("Retract");
+        collider.enabled = false;
         isUp = false;
     }
 
     private void Attack()
     {
-        GameObject slimeProjectile = Instantiate(projectile, projectileSpawnPoint.transform.position, Quaternion.identity); //spawns the projectile
-        isWaiting = true;
+        isAttacking = true;
+        StartCoroutine(Shoot());
+    }
+
+    IEnumerator Shoot()
+    {
+        Instantiate(projectile, projectileSpawnPoint.transform.position, Quaternion.identity); //spawns the projectile
+        yield return new WaitForSecondsRealtime(3f);
+        isAttacking = false;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            player = collision.gameObject.GetComponent<PlayerHealth>();
+            player.health -= damage;
+        }
     }
 }

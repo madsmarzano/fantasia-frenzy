@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - WeaponBox
   - Bullet
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX

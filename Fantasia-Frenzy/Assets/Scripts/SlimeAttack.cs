@@ -7,22 +7,42 @@ public class SlimeAttack : MonoBehaviour
     public int projectileHealth;
     public int speed;
     public int damage;
+    [SerializeField] private float destroyTime;
 
-    //private int shootDirection;
     private Rigidbody2D rb;
-    public Transform target;
+    private Vector2 shootDirection;
+    private Transform target;
 
-    private Vector2 shootDirection => target.transform.localScale.x < gameObject.transform.localScale.x ? Vector2.right : Vector2.left; //checks if player is to right or left of slime
+    private PlayerHealth player;
 
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        shootDirection = target.position.x < transform.position.x ? Vector2.left : Vector2.right; //checks if player is to right or left of slime
 
         SetVelocity();
+        SetDestroyTime();
     }
+
 
     void SetVelocity()
     {
         rb.velocity = shootDirection * speed;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            player = collision.gameObject.GetComponent<PlayerHealth>();
+            player.health -= damage;
+            Destroy(gameObject);
+        }
+    }
+    private void SetDestroyTime()
+    {
+        Destroy(gameObject, destroyTime);
+    }
+
 }
