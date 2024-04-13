@@ -18,8 +18,6 @@ public class BulletBehavior : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        //enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyBehavior>();
-
         SetStraightVelocity();
         SetDestroyTime();
     }
