@@ -351,6 +351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpg-7
       objectReference: {fileID: 0}
+    - target: {fileID: 1617163118020829895, guid: 13b126b7d855fe640a594ab073fbd6a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3597221073299722189, guid: 13b126b7d855fe640a594ab073fbd6a0, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -442,6 +446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShotGun
       objectReference: {fileID: 0}
+    - target: {fileID: 8777593430060350374, guid: dae4f2bca9d87004091828d9fbb97128, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8777593430060350375, guid: dae4f2bca9d87004091828d9fbb97128, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -503,6 +511,10 @@ PrefabInstance:
     - target: {fileID: 4183822308113638681, guid: b99829bb2588f364ab0ab2b8e869c632, type: 3}
       propertyPath: m_Name
       value: Awp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183822308113638681, guid: b99829bb2588f364ab0ab2b8e869c632, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4183822308113638681, guid: b99829bb2588f364ab0ab2b8e869c632, type: 3}
       propertyPath: m_TagString
@@ -647,6 +659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoltCaster
       objectReference: {fileID: 0}
+    - target: {fileID: 8101931673768348059, guid: 37edc4154c9b30c46a3a7ed7814555a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37edc4154c9b30c46a3a7ed7814555a3, type: 3}
 --- !u!4 &6700997741806028562 stripped
@@ -664,6 +680,10 @@ PrefabInstance:
     - target: {fileID: 1071461147353312961, guid: a98fd3a6d71756f42a1663f9c84b4cae, type: 3}
       propertyPath: m_Name
       value: AK47
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071461147353312961, guid: a98fd3a6d71756f42a1663f9c84b4cae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1071461147353312964, guid: a98fd3a6d71756f42a1663f9c84b4cae, type: 3}
       propertyPath: m_RootOrder
@@ -764,6 +784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Magnum
       objectReference: {fileID: 0}
+    - target: {fileID: 6354594941175810766, guid: 2b8c1c5613ebce348bcca183767c7021, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7687190918016779652, guid: 2b8c1c5613ebce348bcca183767c7021, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -854,6 +878,10 @@ PrefabInstance:
     - target: {fileID: 4234088526508552364, guid: d89516ce3f3457446b96cc7b7a22d66d, type: 3}
       propertyPath: m_Name
       value: M4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4234088526508552364, guid: d89516ce3f3457446b96cc7b7a22d66d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4234088526508552366, guid: d89516ce3f3457446b96cc7b7a22d66d, type: 3}
       propertyPath: m_RootOrder
@@ -946,6 +974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseGun
       objectReference: {fileID: 0}
+    - target: {fileID: 1646684854897913561, guid: 3543148276d50a34d94b7c370fbd898a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1646684854897913562, guid: 3543148276d50a34d94b7c370fbd898a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1015,6 +1047,10 @@ PrefabInstance:
     - target: {fileID: 82412860019331282, guid: 830e2dce2e4c83647a5077f7405d3527, type: 3}
       propertyPath: m_Name
       value: Degal
+      objectReference: {fileID: 0}
+    - target: {fileID: 82412860019331282, guid: 830e2dce2e4c83647a5077f7405d3527, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 82412860019331292, guid: 830e2dce2e4c83647a5077f7405d3527, type: 3}
       propertyPath: bulletSpawnPoint
@@ -1135,6 +1171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MG
       objectReference: {fileID: 0}
+    - target: {fileID: 8312224679862658592, guid: e5475a038a3d7964ead63e9c2426831f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5475a038a3d7964ead63e9c2426831f, type: 3}
 --- !u!1 &5689667282141602785 stripped
@@ -1205,6 +1245,10 @@ PrefabInstance:
     - target: {fileID: 8156910004354044083, guid: d03b86f8193d06d4394d7f82be0e92b8, type: 3}
       propertyPath: m_Name
       value: RailGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156910004354044083, guid: d03b86f8193d06d4394d7f82be0e92b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d03b86f8193d06d4394d7f82be0e92b8, type: 3}
