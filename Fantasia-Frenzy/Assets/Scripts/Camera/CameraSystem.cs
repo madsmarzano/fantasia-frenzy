@@ -6,12 +6,17 @@ public class CameraSystem : MonoBehaviour
 {
     private GameObject player;
     public float xMin;
-    public float xMax;
+    public float xMax = 1000f;
     public float yMin;
     public float yMax;
 
     private void Start()
     {
+        //set camera xMin and yMin based on position in editor
+        xMin = transform.position.x;
+        yMin = transform.position.y;
+        yMax = transform.position.y + 100;
+
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -22,4 +27,5 @@ public class CameraSystem : MonoBehaviour
 
         transform.position = new Vector3(x, y, transform.position.z);
     }
+
 }
