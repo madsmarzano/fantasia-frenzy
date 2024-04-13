@@ -7,9 +7,10 @@ using UnityEngine;
 public class WeaponBox : MonoBehaviour
 {
 
-    private PlayerCollisionCheck playerCollider;
+    //private PlayerCollisionCheck playerCollider;
     private Animator animator;
-    private SwitchWeapon weapon;
+    //private SwitchWeapon weapon;
+    [SerializeField] WeaponValue weapon;
     private GameObject _WeaponHolder;
 
     public bool isOpen = false;
@@ -20,8 +21,8 @@ public class WeaponBox : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollisionCheck>();
-        weapon = GameObject.FindGameObjectWithTag("WeaponHolder").GetComponent<SwitchWeapon>();
+        //playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollisionCheck>();
+        //weapon = GameObject.FindGameObjectWithTag("WeaponHolder").GetComponent<SwitchWeapon>();
         _WeaponHolder = GameObject.FindGameObjectWithTag("WeaponHolder");
     }
 
@@ -71,11 +72,11 @@ public class WeaponBox : MonoBehaviour
     {
         Debug.Log("Generating Weapon");
         rand = Random.Range(1, _WeaponHolder.transform.childCount);
-        while (rand == weapon.selectedWeapon)
+        while (rand == weapon.selected)
         {
             rand = Random.Range(1, _WeaponHolder.transform.childCount);
         }
-        weapon.selectedWeapon = rand;
+        weapon.selected = rand;
         //boxOpen = true;
         //SelectWeapon();
     }

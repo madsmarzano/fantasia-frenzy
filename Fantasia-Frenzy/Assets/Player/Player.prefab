@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 11400000, guid: 74f5b5cfa46fcd54bab50df95f38f42a, type: 2}
-  maxHealth: {fileID: 11400000, guid: 74f5b5cfa46fcd54bab50df95f38f42a, type: 2}
+  currentHealth: 0
   flashMaterial: {fileID: 2100000, guid: c8500af2e3e1a394c907e8cb6cfbb3c2, type: 2}
   originalMaterial: {fileID: 0}
 --- !u!114 &6700997741811486704
@@ -328,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedWeapon: 0
   currentWeapon: 0
+  value: {fileID: 11400000, guid: e7fbaba253c6af941b20209566c05b5c, type: 2}
 --- !u!210 &6618550068179643098
 SortingGroup:
   m_ObjectHideFlags: 0

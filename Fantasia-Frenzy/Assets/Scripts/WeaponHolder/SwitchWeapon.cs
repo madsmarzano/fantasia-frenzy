@@ -4,39 +4,32 @@ using UnityEngine;
 
 public class SwitchWeapon : MonoBehaviour
 {
-    private PlayerCollisionCheck playerCollider;
-    //private WeaponBoxAnimation wb;
-
     public int selectedWeapon = 0;
     public int currentWeapon = 0;
-    private int rand;
-    //private bool boxOpen = false;
+
+    [SerializeField] WeaponValue value;
 
     private void Start()
     {
-        playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollisionCheck>();
-
         SelectWeapon(); //sets weapon to 0 at Start
+        value.ResetValue();
     }
 
     private void Update()
     {
+        //value.current = currentWeapon;
+
         // REJECT WEAPON
-        if (Input.GetKeyDown(KeyCode.Q) && selectedWeapon != 0)
+        if (Input.GetKeyDown(KeyCode.Q) && value.selected != 0)
         {
             RejectWeapon();
         }
 
-        if (currentWeapon != selectedWeapon)
+        if (value.current != value.selected)
         {
             SelectWeapon();
         }
 
-        // INTERACTING WITH WEAPON BOX
-        //if (Input.GetKeyDown(KeyCode.E) && playerCollider.isTouchingBox) //checks if 'E' key is pressed and player is touching weapon box
-        //{
-        //    GenerateWeapon();
-        //}
     }
 
     public void SelectWeapon()
@@ -44,32 +37,18 @@ public class SwitchWeapon : MonoBehaviour
         int i = 0;
         foreach (Transform weapon in transform)
         {
-            if (i == selectedWeapon)
+            if (i == value.selected)
                 weapon.gameObject.SetActive(true);
             else
                 weapon.gameObject.SetActive(false);
             i++;
         }
-        currentWeapon = selectedWeapon;
+        value.current = value.selected;
     }
-
-    //random weapon generator - called when interracting with Weapon Box
-    //private void GenerateWeapon()
-    //{
-    //    Debug.Log("Generating Weapon");
-    //    rand = Random.Range(1, transform.childCount);
-    //    while (rand == selectedWeapon)
-    //    {
-    //        rand = Random.Range(1, transform.childCount);
-    //    }
-    //    selectedWeapon = rand;
-    //    //boxOpen = true;
-    //    SelectWeapon();
-    //}
 
     void RejectWeapon()
     {
-        selectedWeapon = 0;
+        value.selected = 0; //Return to Base Gun
         SelectWeapon();
     }
 
