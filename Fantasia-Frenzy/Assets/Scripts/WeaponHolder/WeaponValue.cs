@@ -11,5 +11,6 @@ public class WeaponValue : ScriptableObject
     public void ResetValue()
     {
         current = 0;
+        selected = 0;
     }
 }

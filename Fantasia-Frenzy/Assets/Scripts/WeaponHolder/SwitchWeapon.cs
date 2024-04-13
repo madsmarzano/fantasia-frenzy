@@ -11,8 +11,8 @@ public class SwitchWeapon : MonoBehaviour
 
     private void Start()
     {
-        SelectWeapon(); //sets weapon to 0 at Start
         value.ResetValue();
+        SelectWeapon(); //sets weapon to 0 at Start
     }
 
     private void Update()
