@@ -6,12 +6,10 @@ using UnityEngine;
 
 public class WeaponBox : MonoBehaviour
 {
-
-    //private PlayerCollisionCheck playerCollider;
     private Animator animator;
-    //private SwitchWeapon weapon;
     [SerializeField] WeaponValue weapon;
     private GameObject _WeaponHolder;
+    [SerializeField] GameObject speechBubble;
 
     public bool isOpen = false;
     public bool boxActive = false;
@@ -21,8 +19,7 @@ public class WeaponBox : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        //playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollisionCheck>();
-        //weapon = GameObject.FindGameObjectWithTag("WeaponHolder").GetComponent<SwitchWeapon>();
+        speechBubble.SetActive(false);
         _WeaponHolder = GameObject.FindGameObjectWithTag("WeaponHolder");
     }
 
@@ -33,11 +30,6 @@ public class WeaponBox : MonoBehaviour
             Open();
             GenerateWeapon();
         }
-
-        if (isOpen)
-        {
-            //DisableBox();
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -45,6 +37,7 @@ public class WeaponBox : MonoBehaviour
         if (other.CompareTag("Player") && !isOpen)
         {
             animator.Play("Blink");
+            speechBubble.SetActive(true);
             boxActive = true;
         }
     }
@@ -54,6 +47,7 @@ public class WeaponBox : MonoBehaviour
         if (other.CompareTag("Player") && !isOpen)
         {
             animator.Play("Idle");
+            speechBubble.SetActive(false);
             boxActive = false;
         }
     }
@@ -63,6 +57,7 @@ public class WeaponBox : MonoBehaviour
         if (!isOpen)
         {
             animator.Play("Open");
+            speechBubble.SetActive(false);
             isOpen = true;
             //GetComponent<Collider2D>().enabled = false;
         }
@@ -77,7 +72,5 @@ public class WeaponBox : MonoBehaviour
             rand = Random.Range(1, _WeaponHolder.transform.childCount);
         }
         weapon.selected = rand;
-        //boxOpen = true;
-        //SelectWeapon();
     }
 }
