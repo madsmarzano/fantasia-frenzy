@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health;
-    [SerializeField] private int maxHealth;
+    [SerializeField] PlayerHealthValue health;
+    public float currentHealth; //DELETE LATER
 
     private SpriteRenderer _spriteRenderer;
     [SerializeField] private Material flashMaterial;
@@ -17,6 +17,13 @@ public class PlayerHealth : MonoBehaviour
     {
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         originalMaterial = _spriteRenderer.material;
+
+        health.ResetHealth();
+    }
+
+    private void Update()
+    {
+        currentHealth = health.value;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

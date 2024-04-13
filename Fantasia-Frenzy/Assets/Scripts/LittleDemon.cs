@@ -17,14 +17,14 @@ public class LittleDemon : MonoBehaviour
     private Transform enemy;
     private Transform target;
 
-    private PlayerHealth player;
+    [SerializeField] PlayerHealthValue playerHealth;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         enemy = GetComponent<Transform>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        //player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
         GetDirection();
     }
@@ -80,7 +80,7 @@ public class LittleDemon : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            player.health -= damage;
+            playerHealth.value -= damage;
         }
     }
 }
