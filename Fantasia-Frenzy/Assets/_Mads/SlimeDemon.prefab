@@ -155,6 +155,7 @@ MonoBehaviour:
   attackRange: 5
   projectileSpawnPoint: {fileID: 4034337528659418456}
   projectile: {fileID: 5705007798780964841, guid: 2f0825e338ba2244d8984df71dc6e4b9, type: 3}
+  playerHealth: {fileID: 11400000, guid: 74f5b5cfa46fcd54bab50df95f38f42a, type: 2}
   damage: 10
 --- !u!114 &4034337530250064604
 MonoBehaviour:

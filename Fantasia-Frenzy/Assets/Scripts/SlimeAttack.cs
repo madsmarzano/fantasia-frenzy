@@ -13,7 +13,7 @@ public class SlimeAttack : MonoBehaviour
     private Vector2 shootDirection;
     private Transform target;
 
-    private PlayerHealth player;
+    [SerializeField] PlayerHealthValue playerHealth;
 
     private void Awake()
     {
@@ -35,8 +35,7 @@ public class SlimeAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            player = collision.gameObject.GetComponent<PlayerHealth>();
-            player.health -= damage;
+            playerHealth.value -= damage;
             Destroy(gameObject);
         }
     }

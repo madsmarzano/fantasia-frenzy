@@ -160,7 +160,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   attackDistance: 5
+  damage: 10
   inRange: 0
+  playerHealth: {fileID: 11400000, guid: 74f5b5cfa46fcd54bab50df95f38f42a, type: 2}
 --- !u!114 &5163705427909915979
 MonoBehaviour:
   m_ObjectHideFlags: 0

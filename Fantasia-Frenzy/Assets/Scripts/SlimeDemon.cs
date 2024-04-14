@@ -15,7 +15,7 @@ public class SlimeDemon : MonoBehaviour
     private Animator animator;
     private new CapsuleCollider2D collider;
 
-    private PlayerHealth player;
+    [SerializeField] PlayerHealthValue playerHealth;
     [SerializeField] private int damage;
 
     private void Start()
@@ -76,8 +76,7 @@ public class SlimeDemon : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            player = collision.gameObject.GetComponent<PlayerHealth>();
-            player.health -= damage;
+            playerHealth.value -= damage;
         }
     }
 }
