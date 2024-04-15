@@ -24,7 +24,6 @@ public class LittleDemon : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         enemy = GetComponent<Transform>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        //player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
         GetDirection();
     }

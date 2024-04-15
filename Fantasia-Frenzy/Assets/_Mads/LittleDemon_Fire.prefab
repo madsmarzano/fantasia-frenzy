@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1408247565
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -80445660, guid: 2c14310a2ae4eca4cb9c29649e75aea0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -122,8 +122,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0024277568, y: 0.0022195578}
-  m_Size: {x: 1.250065, y: 1.5029781}
+  m_Offset: {x: -0.019615173, y: 0.04519403}
+  m_Size: {x: 1.7657623, y: 2.2421386}
   m_Direction: 0
 --- !u!50 &5163705427909915978
 Rigidbody2D:
@@ -158,8 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8d809ebcfec7b4c99011c6b08fe39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  attackDistance: 5
+  speed: 15
+  attackDistance: 10
   damage: 10
   inRange: 0
   playerHealth: {fileID: 11400000, guid: 74f5b5cfa46fcd54bab50df95f38f42a, type: 2}

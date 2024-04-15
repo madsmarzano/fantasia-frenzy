@@ -107,7 +107,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1408247565
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -1159725342, guid: fc8ff86ab27c743488c3c3e29ebafed7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40205da257144fe4a4cd78d7a061f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 5
+  attackRange: 15
   projectileSpawnPoint: {fileID: 4034337528659418456}
   projectile: {fileID: 5705007798780964841, guid: 2f0825e338ba2244d8984df71dc6e4b9, type: 3}
   playerHealth: {fileID: 11400000, guid: 74f5b5cfa46fcd54bab50df95f38f42a, type: 2}
@@ -185,6 +185,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004183471, y: -0.30121183}
-  m_Size: {x: 1.4599682, y: 2.5225763}
+  m_Offset: {x: -0.004184723, y: -0.35399616}
+  m_Size: {x: 1.9878159, y: 3.3671238}
   m_Direction: 0
