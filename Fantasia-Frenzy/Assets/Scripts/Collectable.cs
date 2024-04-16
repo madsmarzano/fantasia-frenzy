@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Collectable : MonoBehaviour
+{
+    [SerializeField] private float value = 1;
+    [SerializeField] CollectableCount cheep;
+
+    private void Start()
+    {
+        cheep.Reset();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            cheep.count += value;
+        }
+    }
+}

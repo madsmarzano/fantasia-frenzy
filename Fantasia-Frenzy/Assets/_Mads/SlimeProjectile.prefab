@@ -140,3 +140,5 @@ MonoBehaviour:
   speed: 5
   damage: 20
   destroyTime: 5
+  target: {fileID: 6700997741811486707, guid: 16b78430edd8061439ff4df3e6bfe73a, type: 3}
+  playerHealth: {fileID: 11400000, guid: 74f5b5cfa46fcd54bab50df95f38f42a, type: 2}
