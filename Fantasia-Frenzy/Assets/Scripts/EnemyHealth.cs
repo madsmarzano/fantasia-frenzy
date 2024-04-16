@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
     [SerializeField] private Material flashMaterial;
-    [SerializeField] private Material originalMaterial;
+    private Material originalMaterial;
 
     private Coroutine _damageEffect;
 
