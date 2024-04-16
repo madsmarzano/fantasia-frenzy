@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    public int value = 1;
+    [SerializeField] private float value = 1;
+    [SerializeField] CollectableCount cheep;
+
+    private void Start()
+    {
+        cheep.Reset();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+            cheep.count += value;
         }
     }
 }
