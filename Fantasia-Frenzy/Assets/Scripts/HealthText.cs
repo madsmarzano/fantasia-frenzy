@@ -16,5 +16,7 @@ public class HealthText : MonoBehaviour
     private void Update()
     {
         healthTxt.SetText("Health: " + health.value.ToString() + "%");
+
+        if (health.value <= 20) { healthTxt.color = Color.red; }
     }
 }
