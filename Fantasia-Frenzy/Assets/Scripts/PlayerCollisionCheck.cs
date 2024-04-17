@@ -70,22 +70,6 @@ public class PlayerCollisionCheck : MonoBehaviour
         IsGrounded = touchingCol.Cast(Vector2.down, castFilter, groundHits, groundDistance) > 0;
         IsOnWall = touchingCol.Cast(wallCheckDirection, castFilter, wallHits, wallDistance) > 0;
         IsOnCeiling = touchingCol.Cast(Vector2.up, castFilter, ceilingHits, ceilingDistance) > 0;
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundDistance, LayerMask.GetMask("Platform"));
-        MovingPlatformMM platform = null;
-        if (hit.collider != null)
-        {
-            platform = hit.collider.gameObject.GetComponent<MovingPlatformMM>();
-
-            if (platform != null)
-            {
-                transform.parent = platform.transform;
-            }
-            else 
-            {
-                transform.parent = null;
-            }
-        }
     }
 
     //FUNCTIONS THAT CHECK FOR COLLISION WITH WEAPON BOX

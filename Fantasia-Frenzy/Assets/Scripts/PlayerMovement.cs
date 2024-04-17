@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y); //moves player left and right 
 
         //determine animation
