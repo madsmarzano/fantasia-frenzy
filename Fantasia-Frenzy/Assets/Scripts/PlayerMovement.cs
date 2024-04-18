@@ -38,8 +38,14 @@ public class PlayerMovement : MonoBehaviour
         //check for spacebar input (JUMP)
         if (Input.GetKeyDown(KeyCode.Space) && playerCol.IsGrounded)
         {
-            Jump();
+            body.velocity = new Vector2(body.velocity.x, height); 
         }
+
+        if (Input.GetKeyUp(KeyCode.Space) && body.velocity.y > 0)
+        {
+            body.velocity = new Vector2(body.velocity.x, body.velocity.y * 0.5f);
+        }
+
     }
 
     private void Jump()
