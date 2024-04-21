@@ -177,4 +177,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   flashMaterial: {fileID: 2100000, guid: c8500af2e3e1a394c907e8cb6cfbb3c2, type: 2}
-  originalMaterial: {fileID: 0}
+  enemiesDefeated: {fileID: 11400000, guid: 052812cb374471c49a65c49e8b21b5ac, type: 2}
+  healthItem: {fileID: 33185437068905627, guid: 975740e9010a58043be535fc48995998, type: 3}

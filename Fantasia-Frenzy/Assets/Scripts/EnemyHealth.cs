@@ -10,12 +10,16 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private Material flashMaterial;
     private Material originalMaterial;
 
+    [SerializeField] EnemyKillCount enemiesDefeated;
+    [SerializeField] GameObject healthItem;
+
     private Coroutine _damageEffect;
 
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         originalMaterial = _spriteRenderer.material;
+        enemiesDefeated.Reset();
     }
 
     private void Update()
@@ -23,6 +27,7 @@ public class EnemyHealth : MonoBehaviour
         if (health == 0f)
         {
             EnemyDeath();
+            ItemDrop();
         }
     }
 
@@ -49,5 +54,14 @@ public class EnemyHealth : MonoBehaviour
     private void EnemyDeath()
     {
         gameObject.SetActive(false);
+        enemiesDefeated.count++;
+    }
+
+    private void ItemDrop()
+    {
+        if ((enemiesDefeated.count % 5) == 0)
+        {
+            Instantiate(healthItem, transform.position, Quaternion.identity);
+        }
     }
 }
