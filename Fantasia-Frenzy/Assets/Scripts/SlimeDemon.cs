@@ -69,7 +69,10 @@ public class SlimeDemon : MonoBehaviour
     IEnumerator Shoot()
     {
         Instantiate(projectile, projectileSpawnPoint.transform.position, Quaternion.identity); //spawns the projectile
+        animator.Play("Mouth Close");
         yield return new WaitForSecondsRealtime(3f);
+        animator.Play("Mouth Open");
+        yield return new WaitForSeconds(1f);
         isAttacking = false;
     }
     private void OnCollisionEnter2D(Collision2D collision)

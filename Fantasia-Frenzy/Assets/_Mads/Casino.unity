@@ -3508,7 +3508,7 @@ GameObject:
   - component: {fileID: 1218011333}
   m_Layer: 9
   m_Name: Casino_Floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5685,6 +5685,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 330932970}
     m_Modifications:
+    - target: {fileID: 8239596000824382304, guid: e2ab26da941c42b4db73300d2c758260, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 361736748}
     - target: {fileID: 8239596000824382306, guid: e2ab26da941c42b4db73300d2c758260, type: 3}
       propertyPath: m_RootOrder
       value: 4
