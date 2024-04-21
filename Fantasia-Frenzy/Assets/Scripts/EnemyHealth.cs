@@ -53,7 +53,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void EnemyDeath()
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
         enemiesDefeated.count++;
     }
 
