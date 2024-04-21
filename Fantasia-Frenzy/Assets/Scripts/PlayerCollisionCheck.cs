@@ -63,6 +63,7 @@ public class PlayerCollisionCheck : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         touchingCol = GetComponent<CapsuleCollider2D>();
+        
     }
 
     private void FixedUpdate()
@@ -74,7 +75,7 @@ public class PlayerCollisionCheck : MonoBehaviour
 
     //FUNCTIONS THAT CHECK FOR COLLISION WITH WEAPON BOX
 
-    private void OnTriggerEnter2D(Collider2D other)
+ private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("WeaponBox"))
         {
@@ -92,4 +93,5 @@ public class PlayerCollisionCheck : MonoBehaviour
             }
         }
     }
+
 }
