@@ -5313,8 +5313,10 @@ GameObject:
   - component: {fileID: 1984126764}
   - component: {fileID: 1984126763}
   - component: {fileID: 1984126762}
+  - component: {fileID: 1984126765}
+  - component: {fileID: 1984126766}
   m_Layer: 9
-  m_Name: Placeholder_FallingPlatform
+  m_Name: FallingCeiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5413,6 +5415,42 @@ Transform:
   m_Father: {fileID: 719368644}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1984126765
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984126761}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &1984126766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984126761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73503385345b78459751a1fbd1dbc67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallWait: 2
+  destroyWait: 1
+  distance: 12
 --- !u!1001 &1984830029
 PrefabInstance:
   m_ObjectHideFlags: 0
