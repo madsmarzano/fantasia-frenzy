@@ -72,7 +72,7 @@ public class SlimeDemon : MonoBehaviour
         animator.Play("Mouth Close");
         yield return new WaitForSecondsRealtime(3f);
         animator.Play("Mouth Open");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f); 
         isAttacking = false;
     }
     private void OnCollisionEnter2D(Collision2D collision)
