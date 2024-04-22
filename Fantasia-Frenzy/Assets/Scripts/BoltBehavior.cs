@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class BoltBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    EnemyHealth enemy;
+    private Coroutine _damageEnemy;
+    public float damage;
+    public int attackCycles = 3;
+
+    private SpriteRenderer enemySpriteRenderer;
+    private Material originalMaterial;
+    [SerializeField] private Material flashMaterial;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Enemy")) {
+            enemy = collision.GetComponent<EnemyHealth>();
+            enemySpriteRenderer = collision.GetComponent<SpriteRenderer>();
+            originalMaterial = enemySpriteRenderer.material;
+            if (_damageEnemy != null) {
+                StopCoroutine(DamageEnemy(enemy, enemySpriteRenderer, originalMaterial));
+            }
+            _damageEnemy = StartCoroutine(DamageEnemy(enemy, enemySpriteRenderer, originalMaterial));
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator DamageEnemy(EnemyHealth enemy, SpriteRenderer enemySpriteRenderer, Material originalMaterial) 
     {
-        
+        for (int i = 0; i < attackCycles; i++) {
+            enemy.health = enemy.health - damage;
+            enemySpriteRenderer.material = flashMaterial;
+            yield return new WaitForSeconds(0.5f);
+            enemySpriteRenderer.material = originalMaterial;
+        }
+        _damageEnemy = null;
     }
 }

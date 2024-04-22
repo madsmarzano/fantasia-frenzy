@@ -43,7 +43,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    IEnumerator DamageEffect()
+    public IEnumerator DamageEffect()
     {
         _spriteRenderer.material = flashMaterial;
         yield return new WaitForSeconds(0.15f);
