@@ -120,8 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  attackCycles: 3
-  flashMaterial: {fileID: 2100000, guid: c8500af2e3e1a394c907e8cb6cfbb3c2, type: 2}
 --- !u!61 &6337680983491277388
 BoxCollider2D:
   m_ObjectHideFlags: 0

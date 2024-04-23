@@ -1,39 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BoltBehavior : MonoBehaviour
 {
     EnemyHealth enemy;
-    private Coroutine _damageEnemy;
     public float damage;
-    public int attackCycles = 3;
 
-    private SpriteRenderer enemySpriteRenderer;
-    private Material originalMaterial;
-    [SerializeField] private Material flashMaterial;
+    public bool isTouchingEnemy = false;
+    public bool isAttacking = false;
+
+    private void Update()
+    {
+        if (isTouchingEnemy && !isAttacking)
+        {
+            StartCoroutine(DamageEnemy());
+        }
+        else
+        {
+            StopCoroutine(DamageEnemy()); 
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy")) {
             enemy = collision.GetComponent<EnemyHealth>();
-            enemySpriteRenderer = collision.GetComponent<SpriteRenderer>();
-            originalMaterial = enemySpriteRenderer.material;
-            if (_damageEnemy != null) {
-                StopCoroutine(DamageEnemy(enemy, enemySpriteRenderer, originalMaterial));
-            }
-            _damageEnemy = StartCoroutine(DamageEnemy(enemy, enemySpriteRenderer, originalMaterial));
+            isTouchingEnemy = true;
         }
     }
 
-    IEnumerator DamageEnemy(EnemyHealth enemy, SpriteRenderer enemySpriteRenderer, Material originalMaterial) 
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        for (int i = 0; i < attackCycles; i++) {
-            enemy.health = enemy.health - damage;
-            enemySpriteRenderer.material = flashMaterial;
-            yield return new WaitForSeconds(0.5f);
-            enemySpriteRenderer.material = originalMaterial;
-        }
-        _damageEnemy = null;
+        isTouchingEnemy = false;
+    }
+
+    IEnumerator DamageEnemy() 
+    {
+        isAttacking = true;
+        enemy.health -= damage;
+        yield return new WaitForSeconds(0.5f);
+        isAttacking = false;
     }
 }

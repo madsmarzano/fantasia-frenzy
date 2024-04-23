@@ -14,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] GameObject healthItem;
 
     private Coroutine _damageEffect;
+    private Coroutine _boltEffect;
 
     private void Start()
     {
@@ -41,9 +42,27 @@ public class EnemyHealth : MonoBehaviour
             }
             _damageEffect = StartCoroutine(DamageEffect());
         }
+
+        if (other.CompareTag("Bolt"))
+        {
+            _spriteRenderer.material = flashMaterial;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        _spriteRenderer.material = originalMaterial;
     }
 
     public IEnumerator DamageEffect()
+    {
+        _spriteRenderer.material = flashMaterial;
+        yield return new WaitForSeconds(0.15f);
+        _spriteRenderer.material = originalMaterial;
+        _damageEffect = null;
+    }
+
+    public IEnumerator BoltEffect()
     {
         _spriteRenderer.material = flashMaterial;
         yield return new WaitForSeconds(0.15f);
