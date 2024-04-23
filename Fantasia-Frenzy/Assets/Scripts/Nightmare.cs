@@ -11,6 +11,7 @@ public class Nightmare : MonoBehaviour
 
     private Vector3 nextPosition;
 
+
     public bool isDead = false;
     private EnemyHealth enemyHealth;
 
@@ -36,8 +37,10 @@ public class Nightmare : MonoBehaviour
         {
             if (!isAttacking)
             {
-                transform.position = Vector3.MoveTowards(transform.position, nextPosition, floatSpeed * Time.deltaTime);
+                //transform.position = Vector3.MoveTowards(transform.position, nextPosition, floatSpeed * Time.deltaTime);
             }
+
+            transform.position = Vector3.MoveTowards(transform.position, nextPosition, floatSpeed * Time.deltaTime);
 
             if (transform.position == nextPosition)
             {
@@ -68,8 +71,8 @@ public class Nightmare : MonoBehaviour
     IEnumerator Attack()
     {
         isAttacking = true;
-        GameObject lightningInst = Instantiate(lightning, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(2f);
+        GameObject lightningInst = Instantiate(lightning, new Vector2(transform.position.x, transform.position.y - 1), Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
         isAttacking = false;
     }
 

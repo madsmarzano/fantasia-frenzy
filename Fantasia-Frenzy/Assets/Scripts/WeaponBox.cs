@@ -14,6 +14,9 @@ public class WeaponBox : MonoBehaviour
     public bool isOpen = false;
     public bool boxActive = false;
 
+    private Rigidbody2D rb;
+    private BoxCollider2D boxCol;
+
     private int rand;
 
     private void Start()
@@ -21,6 +24,8 @@ public class WeaponBox : MonoBehaviour
         animator = GetComponent<Animator>();
         speechBubble.SetActive(false);
         _WeaponHolder = GameObject.FindGameObjectWithTag("WeaponHolder");
+        rb = GetComponent<Rigidbody2D>();
+        boxCol = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -39,6 +44,15 @@ public class WeaponBox : MonoBehaviour
             animator.Play("Blink");
             speechBubble.SetActive(true);
             boxActive = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+            boxCol.isTrigger = true;
         }
     }
 

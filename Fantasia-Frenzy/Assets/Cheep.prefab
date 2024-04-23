@@ -116,3 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 1
   cheep: {fileID: 11400000, guid: 730c192281240794b94fa4d92381ddeb, type: 2}
+  _weaponBox: {fileID: 7347534826092679570, guid: 2c72cc6f2a6c590429f1a8ebedf4fd79, type: 3}

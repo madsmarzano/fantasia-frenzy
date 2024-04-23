@@ -7,6 +7,8 @@ public class Collectable : MonoBehaviour
     [SerializeField] private float value = 1;
     [SerializeField] CollectableCount cheep;
 
+    [SerializeField] GameObject _weaponBox;
+
     private void Start()
     {
         cheep.Reset();
@@ -18,6 +20,16 @@ public class Collectable : MonoBehaviour
         {
             Destroy(gameObject);
             cheep.count += value;
+
+            if ((cheep.count % 10) == 0)
+            {
+                SpawnWeaponBox();
+            }
         }
+    }
+
+    void SpawnWeaponBox()
+    {
+        Instantiate(_weaponBox, new Vector2(transform.position.x + 2, transform.position.y + 2), Quaternion.identity);
     }
 }

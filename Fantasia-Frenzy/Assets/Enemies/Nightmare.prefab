@@ -115,6 +115,10 @@ PrefabInstance:
       propertyPath: distance
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2220738218235117763, guid: 14ec48e0ac03e35448391b0d93c1b38f, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6939770477350593489, guid: 14ec48e0ac03e35448391b0d93c1b38f, type: 3}
       propertyPath: m_Name
       value: Nightmare
