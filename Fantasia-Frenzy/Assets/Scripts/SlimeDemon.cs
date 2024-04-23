@@ -40,9 +40,14 @@ public class SlimeDemon : MonoBehaviour
         }
 
         //If animation of mouth opening has finished playing, start Attack
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Mouth Open") && !isAttacking)
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Mouth Open") && isUp && !isAttacking)
         {
             Attack();
+        }
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Mouth Close") && !isAttacking)
+        {
+            animator.Play("Mouth Open");
         }
     }
 
@@ -69,7 +74,10 @@ public class SlimeDemon : MonoBehaviour
     IEnumerator Shoot()
     {
         Instantiate(projectile, projectileSpawnPoint.transform.position, Quaternion.identity); //spawns the projectile
+        animator.Play("Mouth Close");
         yield return new WaitForSecondsRealtime(3f);
+        //animator.Play("Mouth Open");
+        //yield return new WaitForSeconds(1f); 
         isAttacking = false;
     }
     private void OnCollisionEnter2D(Collision2D collision)

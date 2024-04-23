@@ -20,18 +20,23 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y); //moves player left and right 
+    }
 
+    private void Update()
+    {
         //determine animation
         if (!playerCol.IsGrounded)
         {
             animator.Play("Jump");
-        } else if (Input.GetAxis("Horizontal") != 0)
+        }
+        else if (Input.GetAxis("Horizontal") != 0)
         {
             animator.Play("Walk");
-        } else
+        }
+        else
         {
             animator.Play("Idle");
         }
@@ -39,14 +44,13 @@ public class PlayerMovement : MonoBehaviour
         //check for spacebar input (JUMP)
         if (Input.GetKeyDown(KeyCode.Space) && playerCol.IsGrounded)
         {
-            body.velocity = new Vector2(body.velocity.x, height); 
+            body.velocity = new Vector2(body.velocity.x, height);
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && body.velocity.y > 0)
         {
             body.velocity = new Vector2(body.velocity.x, body.velocity.y * 0.5f);
         }
-
     }
 
 }
