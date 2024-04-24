@@ -8,21 +8,25 @@ public class Nightmare : MonoBehaviour
     public float floatSpeed = 3f;
     public Transform pointA;
     public Transform pointB;
+    public float damage = 10f;
 
     private Vector3 nextPosition;
 
+    //private bool isDead = false;
+    private bool isAttacking = false;
+    private bool isWaiting = false;
 
-    public bool isDead = false;
     private EnemyHealth enemyHealth;
+    [SerializeField] private PlayerHealthValue _playerHealth;
 
-    private bool isAttacking= false;
     [SerializeField] private GameObject lightning;
-    public float distance;
+    private GameObject target;
 
     Rigidbody2D rb;
 
     private void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
         enemyHealth = GetComponent<EnemyHealth>();
         nextPosition = pointA.position;
     }
@@ -31,49 +35,50 @@ public class Nightmare : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    
-    private void Update()
+
+    private void FixedUpdate()
     {
         {
             if (!isAttacking)
             {
-                //transform.position = Vector3.MoveTowards(transform.position, nextPosition, floatSpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, nextPosition, floatSpeed * Time.deltaTime);
             }
-
-            transform.position = Vector3.MoveTowards(transform.position, nextPosition, floatSpeed * Time.deltaTime);
 
             if (transform.position == nextPosition)
             {
                 nextPosition = (nextPosition == pointA.position) ? pointB.position : pointA.position;
             }
-        }
 
-        Physics2D.queriesStartInColliders = false;
-        if (!isDead)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, distance);
-            Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
-
-            if (hit.collider.CompareTag("Player") && !isAttacking)
+            if (isAttacking && !isWaiting)
             {
-                //isAttacking = true;
-                StartCoroutine(Attack());
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, floatSpeed * 2f * Time.deltaTime);
             }
-        }
 
-        if (enemyHealth.health == 0)
-        {
-            isDead = true;
-            rb.velocity = new Vector2(rb.velocity.x, floatSpeed * Vector2.down.x);
         }
     }
 
-    IEnumerator Attack()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        isAttacking = true;
-        GameObject lightningInst = Instantiate(lightning, new Vector2(transform.position.x, transform.position.y - 1), Quaternion.identity);
+        if (collision.CompareTag("Bullet") || collision.CompareTag("Bolt"))
+        {
+            isAttacking = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            _playerHealth.value -= damage;
+            StartCoroutine(AttackWait());
+        }
+    }
+
+    IEnumerator AttackWait()
+    {
+        isWaiting = true;
         yield return new WaitForSeconds(0.5f);
-        isAttacking = false;
+        isWaiting = false;
     }
 
 

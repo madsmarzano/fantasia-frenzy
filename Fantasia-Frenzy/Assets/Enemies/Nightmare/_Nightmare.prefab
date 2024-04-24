@@ -177,6 +177,6 @@ MonoBehaviour:
   floatSpeed: 3
   pointA: {fileID: 0}
   pointB: {fileID: 0}
-  isDead: 0
+  damage: 10
+  _playerHealth: {fileID: 11400000, guid: 74f5b5cfa46fcd54bab50df95f38f42a, type: 2}
   lightning: {fileID: 1369786065143085331, guid: 4235d64aff7a47f40baf4f6a2b647af8, type: 3}
-  distance: 0

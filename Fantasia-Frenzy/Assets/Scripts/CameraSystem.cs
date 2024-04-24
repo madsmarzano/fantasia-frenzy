@@ -13,7 +13,7 @@ public class CameraSystem : MonoBehaviour
     private void Start()
     {
         //set camera xMin and yMin based on position in editor
-        xMin = transform.position.x;
+        xMin = transform.position.x - 50;
         yMin = transform.position.y;
         yMax = transform.position.y + 100;
 
