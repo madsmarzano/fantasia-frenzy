@@ -12,28 +12,17 @@ public class Nightmare : MonoBehaviour
 
     private Vector3 nextPosition;
 
-    //private bool isDead = false;
     private bool isAttacking = false;
     private bool isWaiting = false;
 
-    private EnemyHealth enemyHealth;
     [SerializeField] private PlayerHealthValue _playerHealth;
 
-    [SerializeField] private GameObject lightning;
     private GameObject target;
-
-    Rigidbody2D rb;
 
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
-        enemyHealth = GetComponent<EnemyHealth>();
         nextPosition = pointA.position;
-    }
-
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
@@ -47,11 +36,13 @@ public class Nightmare : MonoBehaviour
             if (transform.position == nextPosition)
             {
                 nextPosition = (nextPosition == pointA.position) ? pointB.position : pointA.position;
+                FlipSprite();
             }
 
             if (isAttacking && !isWaiting)
             {
                 transform.position = Vector3.MoveTowards(transform.position, target.transform.position, floatSpeed * 2f * Time.deltaTime);
+                FlipSprite();
             }
 
         }
@@ -79,6 +70,32 @@ public class Nightmare : MonoBehaviour
         isWaiting = true;
         yield return new WaitForSeconds(0.5f);
         isWaiting = false;
+    }
+
+    private void FlipSprite()
+    {
+        Vector3 localScale = Vector3.one;
+
+        if (!isAttacking)
+        {
+            if (nextPosition.x < transform.position.x){
+                localScale.x = 1;
+                transform.localScale = localScale;
+            } else if (nextPosition.x > transform.position.x) {
+                localScale.x = -1;
+                transform.localScale = localScale;
+            }
+        }
+        if (isAttacking)
+        {
+            if (target.transform.position.x < transform.position.x){
+                localScale.x = 1;
+                transform.localScale = localScale;
+            } else if (target.transform.position.x > transform.position.x) {
+                localScale.x = -1;
+                transform.localScale = localScale;
+            }
+        }
     }
 
 
