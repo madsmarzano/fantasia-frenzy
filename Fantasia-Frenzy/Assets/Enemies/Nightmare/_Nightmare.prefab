@@ -122,8 +122,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.23, y: 0.86}
+  m_Offset: {x: -0.011361119, y: 0.034079913}
+  m_Size: {x: 2.3432848, y: 1.4734483}
   m_Direction: 1
 --- !u!50 &2220738218235117763
 Rigidbody2D:
@@ -179,4 +179,3 @@ MonoBehaviour:
   pointB: {fileID: 0}
   damage: 10
   _playerHealth: {fileID: 11400000, guid: 74f5b5cfa46fcd54bab50df95f38f42a, type: 2}
-  lightning: {fileID: 1369786065143085331, guid: 4235d64aff7a47f40baf4f6a2b647af8, type: 3}
