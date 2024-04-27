@@ -15,10 +15,13 @@ public class FallingLight : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
 
+    private Vector2 startPos;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        startPos = transform.position;
     }
 
     private void Update()
