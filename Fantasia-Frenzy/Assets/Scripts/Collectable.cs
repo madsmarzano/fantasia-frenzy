@@ -30,6 +30,6 @@ public class Collectable : MonoBehaviour
 
     void SpawnWeaponBox()
     {
-        Instantiate(_weaponBox, new Vector2(transform.position.x - 5 , transform.position.y + 2), Quaternion.identity);
+        Instantiate(_weaponBox, new Vector2(transform.position.x , transform.position.y + 2), Quaternion.identity);
     }
 }
