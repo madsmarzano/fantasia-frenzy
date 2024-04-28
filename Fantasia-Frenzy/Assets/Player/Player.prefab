@@ -199,6 +199,7 @@ MonoBehaviour:
   currentHealth: 0
   flashMaterial: {fileID: 2100000, guid: c8500af2e3e1a394c907e8cb6cfbb3c2, type: 2}
   originalMaterial: {fileID: 0}
+  gameOverScreen: {fileID: 6343042652559373868, guid: 7632eae82e1715f42a73cbe620851e0f, type: 3}
 --- !u!114 &6700997741811486704
 MonoBehaviour:
   m_ObjectHideFlags: 0
