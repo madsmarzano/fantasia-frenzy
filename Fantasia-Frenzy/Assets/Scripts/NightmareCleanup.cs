@@ -2,15 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SecretElevator : MonoBehaviour
+public class NightmareCleanup : MonoBehaviour
 {
-    public GameObject _secretElevator;
-
     private void Update()
     {
-        if (transform.childCount == 0)
+        if (transform.childCount < 3)
         {
-            _secretElevator.SetActive(true);
             Destroy(gameObject);
         }
     }

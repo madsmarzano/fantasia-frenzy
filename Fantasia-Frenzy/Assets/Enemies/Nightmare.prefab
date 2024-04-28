@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5951248164302398684}
   - component: {fileID: -2970037779337283008}
+  - component: {fileID: 3108466939305960880}
   m_Layer: 0
   m_Name: Nightmare
   m_TagString: Untagged
@@ -46,6 +47,18 @@ SortingGroup:
   m_SortingLayerID: 1408247565
   m_SortingLayer: 7
   m_SortingOrder: 0
+--- !u!114 &3108466939305960880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951248164302398685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961e4ab8c9af3ee4bb1e2e6fc54ac964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5951248164350476689
 GameObject:
   m_ObjectHideFlags: 0
