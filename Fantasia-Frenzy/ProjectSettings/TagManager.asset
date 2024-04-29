@@ -15,6 +15,7 @@ TagManager:
   - Floor
   - TriggerStart
   - TriggerEnd
+  - Hazard
   layers:
   - Default
   - TransparentFX
