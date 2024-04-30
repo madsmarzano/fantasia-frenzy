@@ -12,11 +12,13 @@ public class FallingCeiling : MonoBehaviour
     bool isFalling = false;
     Rigidbody2D rb;
     BoxCollider2D boxCollider2D;
+    Animator animator;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider2D = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -38,7 +40,9 @@ public class FallingCeiling : MonoBehaviour
     IEnumerator Fall()
     {
         isFalling = true;
+        animator.Play("Warning");
         yield return new WaitForSeconds(fallWait);
+        animator.Play("Falling");
         rb.bodyType = RigidbodyType2D.Dynamic;
         Destroy(gameObject, destroyWait);
     }

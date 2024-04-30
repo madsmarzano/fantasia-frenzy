@@ -8,26 +8,28 @@ public class LostWoodsEffect : MonoBehaviour
     [SerializeField] private GameObject player;
     private Transform playerPos;
     
-    [SerializeField] private GameObject overlay;
+    [SerializeField] private Image overlay;
     private Image overlayImage;
-    private Color overlayColor;
+    private Color overlayColor = new Color(1, 1, 1, 0);
 
     private void Start() 
     {
         playerPos = player.GetComponent<Transform>();
-        overlayColor = overlay.GetComponent<Graphic>().color;
+        overlayColor = overlay.color;
         //overlayColor = overlayImage.color;
 
-        overlayColor.a = 0f;
+        //overlayColor.a = 0f;
     }
 
     private void Update()
     {
-        if (Vector3.Distance (playerPos.position, transform.position) > 0 && Vector3.Distance (playerPos.position, transform.position) <= 10)
+        if (Vector2.Distance (playerPos.position, transform.position) > 0 && Vector2.Distance (playerPos.position, transform.position) <= 10)
         {
-            float distance = Vector3.Distance(playerPos.position, transform.position);
+            float distance = Vector2.Distance(playerPos.position, transform.position);
+            //Debug.Log("distance is " + distance);
             float newAlpha = 1 - (distance/10);
             overlayColor.a = newAlpha;
+            overlay.color = overlayColor;
         }
     }
 
