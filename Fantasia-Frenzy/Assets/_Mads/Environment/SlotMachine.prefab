@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8239596000824382307}
   - component: {fileID: 8239596000824382305}
   - component: {fileID: 8239596000824382304}
+  - component: {fileID: 4849554110079429462}
+  - component: {fileID: 7256653638469836323}
   m_Layer: 0
   m_Name: SlotMachine
   m_TagString: Untagged
@@ -120,3 +122,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 6700997741811486707, guid: 16b78430edd8061439ff4df3e6bfe73a, type: 3}
   activeRange: 5
+--- !u!61 &4849554110079429462
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8239596000824382316}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.37041855, y: -1.0299486}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 7}
+    newSize: {x: 5, y: 7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.259163, y: 0.820307}
+  m_EdgeRadius: 0
+--- !u!251 &7256653638469836323
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8239596000824382316}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1

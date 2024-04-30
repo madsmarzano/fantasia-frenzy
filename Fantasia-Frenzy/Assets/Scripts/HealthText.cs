@@ -17,6 +17,6 @@ public class HealthText : MonoBehaviour
     {
         healthTxt.SetText("Health: " + health.value.ToString() + "%");
 
-        if (health.value <= 20) { healthTxt.color = Color.red; }
+        healthTxt.color = health.value <= 20 ? Color.red : Color.white;
     }
 }

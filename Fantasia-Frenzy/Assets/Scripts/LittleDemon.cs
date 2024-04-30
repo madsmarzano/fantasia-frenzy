@@ -12,6 +12,8 @@ public class LittleDemon : MonoBehaviour
     public bool inRange = false;
     private bool isAttacking = false;
 
+    private bool isActive = false;
+
     private Vector2 direction;
     private Rigidbody2D rb;
     private Transform enemy;
@@ -41,6 +43,12 @@ public class LittleDemon : MonoBehaviour
         }
 
         if (inRange && !isAttacking)
+        {
+            isActive = true;
+            StartCoroutine(Attack());
+        }
+
+        if (isActive && !isAttacking)
         {
             StartCoroutine(Attack());
         }

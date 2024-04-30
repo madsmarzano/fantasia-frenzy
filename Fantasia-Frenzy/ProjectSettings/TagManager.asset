@@ -13,6 +13,9 @@ TagManager:
   - Bullet
   - EnemyProjectile
   - Floor
+  - TriggerStart
+  - TriggerEnd
+  - Hazard
   layers:
   - Default
   - TransparentFX

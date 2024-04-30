@@ -25,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Update()
     {
-        if (health == 0f)
+        if (health <= 0f)
         {
             EnemyDeath();
             ItemDrop();

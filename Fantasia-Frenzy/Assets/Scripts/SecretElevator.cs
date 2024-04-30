@@ -11,6 +11,7 @@ public class SecretElevator : MonoBehaviour
         if (transform.childCount == 0)
         {
             _secretElevator.SetActive(true);
+            Destroy(gameObject);
         }
     }
 }

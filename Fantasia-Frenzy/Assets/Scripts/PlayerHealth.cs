@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     [SerializeField] private Material flashMaterial;
     [SerializeField] private Material originalMaterial;
+
+    public GameOverScreen gameOverScreen;
 
     private Coroutine _damageEffect;
 
@@ -24,11 +27,24 @@ public class PlayerHealth : MonoBehaviour
     private void Update()
     {
         currentHealth = health.value;
+
+        if (health.value <= 0)
+        {
+            //GAME OVER
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        //Scene currentScene = SceneManager.GetActiveScene();
+        //SceneManager.LoadScene("Game Over");
+        gameOverScreen.Setup();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyProjectile")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyProjectile" || collision.gameObject.tag == "Hazard")
         {
             if (_damageEffect != null)
             {
