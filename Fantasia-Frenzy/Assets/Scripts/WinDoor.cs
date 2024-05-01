@@ -14,7 +14,7 @@ public class WinDoor : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && isTouchingDoor )
         {
-            SceneManager.LoadScene("Hood"); //CHANGE THIS LATER
+            SceneManager.LoadScene("Shane"); //CHANGE THIS LATER
         }
     }
 
