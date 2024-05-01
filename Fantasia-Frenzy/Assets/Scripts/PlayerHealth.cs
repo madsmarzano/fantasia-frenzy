@@ -54,6 +54,18 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision) //specifically for gansta bullet
+    {
+        if (collision.CompareTag("EnemyProjectile"))
+        {
+            if (_damageEffect != null)
+            {
+                StopCoroutine(_damageEffect);
+            }
+            _damageEffect = StartCoroutine(DamageEffect());
+        }
+    }
+
     IEnumerator DamageEffect()
     {
         _spriteRenderer.material = flashMaterial;
