@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeDemon (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4034337530250064606, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 331241194511231243, guid: ddc1407a35580da4d845c5f4f90ae3ed, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
 --- !u!1001 &186846135
@@ -349,6 +353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeDemon (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4034337530250064606, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 331241194511231243, guid: ddc1407a35580da4d845c5f4f90ae3ed, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
 --- !u!1 &405785156
@@ -2574,6 +2582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeDemon
       objectReference: {fileID: 0}
+    - target: {fileID: 4034337530250064606, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 331241194511231243, guid: ddc1407a35580da4d845c5f4f90ae3ed, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
 --- !u!1 &806502515
@@ -3901,6 +3913,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeDemon (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4034337530250064606, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 331241194511231243, guid: ddc1407a35580da4d845c5f4f90ae3ed, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
 --- !u!1001 &1667188323
@@ -4072,6 +4088,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeDemon (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4034337530250064606, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 331241194511231243, guid: ddc1407a35580da4d845c5f4f90ae3ed, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
 --- !u!1 &1733212245
@@ -4382,6 +4402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeDemon (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4034337530250064606, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 331241194511231243, guid: ddc1407a35580da4d845c5f4f90ae3ed, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70aa3fb0b8b20f84392cf0884446e075, type: 3}
 --- !u!1 &1956870584
