@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class WinDoor : MonoBehaviour
 {
-    //private GameObject speechBubble;
     private bool isTouchingDoor = false;
 
     private void Update()
@@ -14,7 +13,7 @@ public class WinDoor : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && isTouchingDoor )
         {
-            SceneManager.LoadScene("Shane"); //CHANGE THIS LATER
+            SceneManager.LoadScene("Shane");
         }
     }
 
@@ -23,8 +22,7 @@ public class WinDoor : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isTouchingDoor = true;
-            transform.GetChild(0).gameObject.SetActive(true);
-            //speechBubble.SetActive(true);
+            transform.GetChild(0).gameObject.SetActive(true); //activates speech bubble (prompt to press E)
         }
     }
 
@@ -32,6 +30,5 @@ public class WinDoor : MonoBehaviour
     {
         isTouchingDoor = false;
         transform.GetChild(0).gameObject.SetActive(false);
-        //speechBubble.SetActive(false);
     }
 }
