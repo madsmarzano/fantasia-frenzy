@@ -20,4 +20,9 @@ public class GameOverScreen : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex);
         //Time.timeScale = 1f;
     }
+
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
