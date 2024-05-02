@@ -13,7 +13,7 @@ public class ShaneDoor : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && isTouchingDoor)
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("WinScreen");
         }
     }
 
