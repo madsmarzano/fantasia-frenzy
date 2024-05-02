@@ -12943,7 +12943,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
@@ -17089,7 +17089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 9.99
-  attackDistance: 9.99
+  attackDistance: 50
   damage: 1
   inRange: 0
   playerHealth: {fileID: 11400000, guid: 74f5b5cfa46fcd54bab50df95f38f42a, type: 2}
