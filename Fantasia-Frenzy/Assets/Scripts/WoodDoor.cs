@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WinDoor : MonoBehaviour
+public class WoodDoor : MonoBehaviour
 {
     //private GameObject speechBubble;
     private bool isTouchingDoor = false;
@@ -14,7 +14,7 @@ public class WinDoor : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && isTouchingDoor )
         {
-            SceneManager.LoadScene("Shane"); //CHANGE THIS LATER
+            SceneManager.LoadScene("Hood"); //CHANGE THIS LATER
         }
     }
 
@@ -24,7 +24,7 @@ public class WinDoor : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isTouchingDoor = true;
-            transform.GetChild(0).gameObject.SetActive(true);
+            
             //speechBubble.SetActive(true);
         }
     }
@@ -32,7 +32,7 @@ public class WinDoor : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isTouchingDoor = false;
-        transform.GetChild(0).gameObject.SetActive(false);
+        
         //speechBubble.SetActive(false);
     }
 }
