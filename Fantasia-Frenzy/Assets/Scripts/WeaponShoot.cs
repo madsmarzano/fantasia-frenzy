@@ -18,11 +18,9 @@ public class WeaponShoot : MonoBehaviour
     private bool isShooting = false;
     private bool isResetting = false;
 
-    //private bool boltActive = false;
-
     private void Start()
     {
-        fullMag = magCount;
+        fullMag = magCount; //sets max mag capacity for reload
     }
 
     private void Update()
@@ -30,16 +28,17 @@ public class WeaponShoot : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && this.CompareTag("Projectile") && !isShooting)
             StartCoroutine(Shoot());
 
+        //full auto weapons have the tag "FullAuto" and will call a separate coroutine
         if (Input.GetMouseButton(0) && this.CompareTag("FullAuto") && !isShooting && magCount > 0)
             StartCoroutine(FullAuto());
+
+        //FOR FULLAUTO - when mag is empty, automatic reset with a reload time
+        if (magCount == 0 && !isResetting)
+            StartCoroutine(ResetMag());
 
         if (Input.GetMouseButtonDown(0) && this.CompareTag("Bolt"))
             Bolt();
 
-        if (magCount == 0 && !isResetting)
-        {
-            StartCoroutine(ResetMag());
-        }
     }
 
     IEnumerator Shoot()
@@ -59,6 +58,7 @@ public class WeaponShoot : MonoBehaviour
         isShooting = true;
         GameObject bulletInst = Instantiate(bullet, bulletSpawnPoint.transform.position, this.transform.rotation);
         animator.Play("Shoot", 0);
+        //subtract ammo from mag
         magCount--;
         yield return new WaitForSeconds(waitTime);
         isShooting = false;

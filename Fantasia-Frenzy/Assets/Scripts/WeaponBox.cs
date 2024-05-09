@@ -73,7 +73,6 @@ public class WeaponBox : MonoBehaviour
             animator.Play("Open");
             speechBubble.SetActive(false);
             isOpen = true;
-            //GetComponent<Collider2D>().enabled = false;
         }
     }
 
