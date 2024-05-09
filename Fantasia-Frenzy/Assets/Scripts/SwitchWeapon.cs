@@ -17,7 +17,6 @@ public class SwitchWeapon : MonoBehaviour
 
     private void Update()
     {
-        //value.current = currentWeapon;
 
         // REJECT WEAPON
         if (Input.GetKeyDown(KeyCode.P) && value.selected != 0)

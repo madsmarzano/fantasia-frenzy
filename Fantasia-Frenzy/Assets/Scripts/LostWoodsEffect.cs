@@ -9,16 +9,13 @@ public class LostWoodsEffect : MonoBehaviour
     private Transform playerPos;
     
     [SerializeField] private Image overlay;
-    private Image overlayImage;
-    private Color overlayColor = new Color(1, 1, 1, 0);
+    private Image overlayImage; //UI Image
+    private Color overlayColor = new Color(1, 1, 1, 0); //white with opacity of 0
 
     private void Start() 
     {
         playerPos = player.GetComponent<Transform>();
         overlayColor = overlay.color;
-        //overlayColor = overlayImage.color;
-
-        //overlayColor.a = 0f;
     }
 
     private void Update()
@@ -26,7 +23,6 @@ public class LostWoodsEffect : MonoBehaviour
         if (Vector2.Distance (playerPos.position, transform.position) > 0 && Vector2.Distance (playerPos.position, transform.position) <= 10)
         {
             float distance = Vector2.Distance(playerPos.position, transform.position);
-            //Debug.Log("distance is " + distance);
             float newAlpha = 1 - (distance/10);
             overlayColor.a = newAlpha;
             overlay.color = overlayColor;
