@@ -120,9 +120,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8777593430060350369}
-  bullet: {fileID: 2114752636909042973, guid: 542542ee40d40f14691edeafa271d74f, type: 3}
+  bullet: {fileID: 8862620875473200906, guid: 2873b26133c52e4409fbec636c412a14, type: 3}
   bolt: {fileID: 0}
   bulletSpawnPoint: {fileID: 8777593430660446493}
+  waitTime: 0
+  reloadTime: 0
+  magCount: 0
 --- !u!1 &8777593430660446493
 GameObject:
   m_ObjectHideFlags: 0

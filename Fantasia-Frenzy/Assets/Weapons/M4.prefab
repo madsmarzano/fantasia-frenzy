@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4234088526508552361}
-  bullet: {fileID: 2114752636909042973, guid: 542542ee40d40f14691edeafa271d74f, type: 3}
+  bullet: {fileID: 5473679926111036234, guid: 73c7398a898b9a94ca8a39209c707d2c, type: 3}
   bolt: {fileID: 0}
   bulletSpawnPoint: {fileID: 7647459424489602369}
   waitTime: 0.1

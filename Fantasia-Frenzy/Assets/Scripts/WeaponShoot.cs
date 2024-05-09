@@ -38,6 +38,7 @@ public class WeaponShoot : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && this.CompareTag("Bolt"))
             Bolt();
+
     }
 
     IEnumerator Shoot()
