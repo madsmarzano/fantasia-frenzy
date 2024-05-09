@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5747433193468721995}
   m_Layer: 0
   m_Name: M4
-  m_TagString: Projectile
+  m_TagString: FullAuto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1580885585
-  m_SortingLayer: 2
+  m_SortingLayer: 10
   m_SortingOrder: 1
   m_Sprite: {fileID: 818605038, guid: 7ffa32b2c3ecb6e4885fa6ada6b9e8bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -122,7 +122,10 @@ MonoBehaviour:
   animator: {fileID: 4234088526508552361}
   bullet: {fileID: 2114752636909042973, guid: 542542ee40d40f14691edeafa271d74f, type: 3}
   bolt: {fileID: 0}
-  bulletSpawnPoint: {fileID: 0}
+  bulletSpawnPoint: {fileID: 7647459424489602369}
+  waitTime: 0.1
+  reloadTime: 3
+  magCount: 30
 --- !u!1 &7647459424489602369
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7647459424489602369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.442, y: 0.037, z: 0}
+  m_LocalPosition: {x: 0.662, y: 0.048, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
