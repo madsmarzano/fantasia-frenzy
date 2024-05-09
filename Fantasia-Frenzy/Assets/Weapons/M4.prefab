@@ -123,7 +123,7 @@ MonoBehaviour:
   bullet: {fileID: 2114752636909042973, guid: 542542ee40d40f14691edeafa271d74f, type: 3}
   bolt: {fileID: 0}
   bulletSpawnPoint: {fileID: 7647459424489602369}
-  waitTime: 0.05
+  waitTime: 0.1
   reloadTime: 3
   magCount: 30
 --- !u!1 &7647459424489602369

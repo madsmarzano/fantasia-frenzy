@@ -16,6 +16,7 @@ TagManager:
   - TriggerStart
   - TriggerEnd
   - Hazard
+  - FullAuto
   layers:
   - Default
   - TransparentFX
