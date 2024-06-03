@@ -6,24 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MainMenu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 42dc9e40adeaa1d4d8d2c0d64b4afa36
   - enabled: 1
-    path: Assets/LevelSelect.unity
+    path: Assets/Scenes/LevelSelect.unity
     guid: c91ce1304e263304d93db9570ffbe55a
   - enabled: 1
-    path: Assets/_Sniel/Honey.unity
+    path: Assets/Scenes/Honey.unity
     guid: ba096cbe272fdc14c8800221685052e2
   - enabled: 1
-    path: Assets/_Jon/Hood.unity
+    path: Assets/Scenes/Hood.unity
     guid: 60bced516820bc14a872045dc223f0ae
   - enabled: 1
-    path: Assets/_Mads/Casino.unity
+    path: Assets/Scenes/Casino.unity
     guid: a3fdd8a4881374d7da9f09879e274993
   - enabled: 1
-    path: Assets/_Shane/Shane.unity
+    path: Assets/Scenes/Shane.unity
     guid: da8ebddc6817a44e9a358cf56c13a9c8
   - enabled: 1
-    path: Assets/WinScreen.unity
+    path: Assets/Scenes/WinScreen.unity
     guid: c0a2b9a08c201d74a9ef8573661aac4a
   m_configObjects: {}
