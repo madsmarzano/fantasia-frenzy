@@ -1,7 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+
+/// <summary>
+/// by Madison Marzano
+/// 
+/// Controls the behavior of the LittleDemon enemy. 
+/// If player is within range of enemy, enemy charges at the player. 
+/// </summary>
 
 public class LittleDemon : MonoBehaviour
 {

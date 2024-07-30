@@ -1,6 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// By Madison Marzano
+/// 
+/// Script that controls the Active, Inactive, and Attack states of the SlimeDemon.
+/// Attack instantiates a projectile which is controlled by the SlimeAttack class. 
+/// </summary>
 
 public class SlimeDemon : MonoBehaviour
 {
@@ -45,6 +51,7 @@ public class SlimeDemon : MonoBehaviour
             Attack();
         }
 
+        //After a full cycle of attack is complete, repeat by opening mouth
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Mouth Close") && !isAttacking)
         {
             animator.Play("Mouth Open");

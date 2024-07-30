@@ -12,7 +12,6 @@ public class SlimeAttack : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 shootDirection;
-    private Vector2 worldPosition;
     private Transform target;
 
     [SerializeField] PlayerHealthValue playerHealth;
@@ -21,9 +20,7 @@ public class SlimeAttack : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        //shootDirection = target.position.x < transform.position.x ? Vector2.left : Vector2.right; //checks if player is to right or left of slime
         shootDirection = target.transform.position;
-        //SetVelocity();
         SetDestroyTime();
     }
 
@@ -35,7 +32,6 @@ public class SlimeAttack : MonoBehaviour
 
     void SetVelocity()
     {
-        //rb.velocity = shootDirection * speed;
         rb.velocity = Vector2.right * speed;
     }
 
